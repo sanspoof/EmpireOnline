@@ -1,0 +1,30 @@
+@use '../styles/globals';
+@use '../styles/variables';
+@use '../styles/mixins';
+@use '../styles/reset';
+
+body {
+    background-color: #433212;
+    font-family: var(--appFont);
+    font-weight: 600;
+    font-style: normal;
+
+
+
+}    
+
+// font-family: "bio-sans", sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// font-family: "bio-sans", sans-serif;
+// font-weight: 400;
+// font-style: italic;
+
+// font-family: "bio-sans", sans-serif;
+// font-weight: 600;
+// font-style: normal;
+
+// font-family: "bio-sans", sans-serif;
+// font-weight: 700;
+// font-style: normal;

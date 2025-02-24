@@ -1,0 +1,14 @@
+.button {
+    background-color: red;
+    color:yellow;
+    text-transform: uppercase;
+    border:none;
+    height:30px;
+    padding:0px 8px;
+
+    &__lbl {
+        color:black;
+    }
+
+}
+ 

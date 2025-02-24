@@ -1,0 +1,79 @@
+{
+    "mainCards": [
+      {
+        "id": 1,
+        "title": "Welcome to the app",
+        "subtitle": "This is a simple app to demonstrate the use of AngularJS",
+        "cta": "Read the Review",
+        "image": null
+      },
+      {
+        "id": 2,
+        "title": "Top 10 Movies of 2025",
+        "subtitle": "Here are the best movies of the year so far!",
+        "cta": "See the List",
+        "image": null
+      },
+      {
+        "id": 3,
+        "title": "Must-Watch TV Shows in 2025",
+        "subtitle": "The hottest series you shouldn’t miss!",
+        "cta": "Check It Out",
+        "image": null
+      }
+    ],
+    "news": [
+      {
+        "id": 101,
+        "date": "2025-02-17",
+        "headline": "Captain America: Brave New World Makes $192 Million On Opening Weekend",
+        "summary": "A lot was riding on Captain America: Brave New World this weekend. It’s been...",
+        "image": null
+      },
+      {
+        "id": 102,
+        "date": "2025-02-18",
+        "headline": "Oppenheimer Wins Best Picture at the Oscars!",
+        "summary": "Christopher Nolan's epic biopic takes home the biggest prize...",
+        "image": null
+      },
+      {
+        "id": 103,
+        "date": "2025-02-19",
+        "headline": "Netflix Announces New Stranger Things Spin-off",
+        "summary": "The hit show’s universe is expanding with a brand-new series...",
+        "image": null
+      }
+    ],
+    "reviews": [
+            {
+            "id": 201,
+            "title": "Chicken Run: Dawn Of The Nugget Review",
+            "content": "That Aardman Animations even exists — still operating out of an unassuming...",
+            "rating": 5,
+            "image": null
+            },
+            {
+            "id": 202,
+            "title": "Fallen Leaves Review",
+            "content": "In 2017, Finnish auteur Aki Kaurismäki announced that The Other Side Of...",
+            "rating": 5,
+            "image": null
+            },
+            {
+            "id": 203,
+            "title": "Wonka Review",
+            "content": "In a move that will surprise absolutely no-one, Wonka begins with a...",
+            "rating": 4,
+            "image": null
+            },
+            {
+            "id": 204,
+            "title": "Femme Review",
+            "content": "Neo-noir meets erotic thriller meets queer revenge tale in Femme, the feature...",
+            "rating": 4,
+            "image": null
+            }
+    ]
+  }
+  

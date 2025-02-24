@@ -1,0 +1,50 @@
+.nav {
+    width:100%;
+    height:var(--MainNavigationHeight);
+    background-color:brown;
+    align-items: center;
+    display: flex;
+    border-bottom:1px solid var(--MainNavigationBorderColor);
+
+    &__logowrapper {
+        padding-left:20px;
+        display: flex;
+        align-items: end;
+        gap:4px;
+    }
+
+    &__logo {
+        width:124px;
+    }
+
+    &__logotxt {
+        font-size:0.7rem;
+        color:#fff;
+        font-weight: 400;
+        font-style: italic;
+        line-height: 0.7rem;
+    }
+
+    &__navitemwrap {
+        display: flex;
+        height:100%;
+        margin-left:auto;
+    }
+
+    &__navitem {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        padding:0px 24px;
+        height:100%;
+        border-left:1px solid var(--MainNavigationBorderColor);
+        color:var(--MainNagivationTextColor);
+
+        &:hover {
+            
+        }
+
+    }
+
+}
+ 
