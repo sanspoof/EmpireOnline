@@ -11,8 +11,7 @@ function NewsItem({ item }) {
         <p>{item.date}</p>
         <h3>{item.headline}</h3> 
         <p>{summary.slice(0, maxSummaryCount) + (summary.length > maxSummaryCount ? "..." : "")}</p> 
-        {item.streamingPlatform && <p>{item.streamingPlatform}</p>
-        } 
+        { item.streamingPlatform && <p>{item.streamingPlatform}</p> } 
       </div>
     );
   }
@@ -22,6 +21,7 @@ function NewsItem({ item }) {
     const data = useData(useData)
 
     return (
+      <>
       <div className={styles.newslist}>
 
         {data.news.map((newsItem) => (
@@ -32,6 +32,7 @@ function NewsItem({ item }) {
         ))}
         
       </div>
+      </>
     );
   }
   
