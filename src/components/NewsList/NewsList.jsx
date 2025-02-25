@@ -2,10 +2,17 @@ import styles from "./NewsList.module.scss";
 import { useData } from "../../context/DataContext";
 
 function NewsItem({ item }) {
+
+    let maxSummaryCount = 190;
+    let summary = item.summary;
+
     return (
       <div className={styles.newsitem}>
-        <h3>{item.headline}</h3>
-        <p>{item.summary}</p>
+        <p>{item.date}</p>
+        <h3>{item.headline}</h3> 
+        <p>{summary.slice(0, maxSummaryCount) + (summary.length > maxSummaryCount ? "..." : "")}</p> 
+        {item.streamingPlatform && <p>{item.streamingPlatform}</p>
+        } 
       </div>
     );
   }
@@ -18,7 +25,10 @@ function NewsItem({ item }) {
       <div className={styles.newslist}>
 
         {data.news.map((newsItem) => (
-          <NewsItem key={newsItem.id} item={newsItem} /> // note to Alex, look at assigning key without hardcoding the ID in the data...
+          <NewsItem 
+          key={newsItem.id} 
+          item={newsItem} 
+          /> 
         ))}
         
       </div>

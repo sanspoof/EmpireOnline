@@ -28,21 +28,64 @@
         "date": "2025-02-17",
         "headline": "Captain America: Brave New World Makes $192 Million On Opening Weekend",
         "summary": "A lot was riding on Captain America: Brave New World this weekend. It’s been...",
-        "image": null
+        "image": null,
+        "streamingPlatform": null
       },
       {
         "id": 102,
-        "date": "2025-02-18",
-        "headline": "Oppenheimer Wins Best Picture at the Oscars!",
-        "summary": "Christopher Nolan's epic biopic takes home the biggest prize...",
-        "image": null
+        "date": "2025-02-16",
+        "headline": "Micky 17",
+        "summary": "No-one is better than director Bong Joon Ho at using the rules of genre filmmaking against his audience. In the extraordinary Parasite, he engineered a mid-film switch from social comedy to something much darker and more outrageous; in Snowpiercer, it emerged that the revolutionary struggle we’d been rooting for was only a fraction of the true battle for survival. Now, in Mickey 17, he tackles space travel and the colonisation of alien worlds. If it’s a more conventional film than his best work, he still finds ways to subvert our expectations and continually surprise us with a hero who’s just trying his inadequate best.",
+        "image": null,
+        "streamingPlatform": null
       },
       {
         "id": 103,
-        "date": "2025-02-19",
-        "headline": "Netflix Announces New Stranger Things Spin-off",
-        "summary": "The hit show’s universe is expanding with a brand-new series...",
-        "image": null
+        "date": "2025-02-17",
+        "headline": "Aimee Lou Wood & Nabhaan Rizwan Lead BBC Comedy Drama ‘Film Club’ — See Exclusive First-Look Photos",
+        "summary": "Aimee Lou Wood is having quite the moment right about now. Having burst onto...",
+        "image": null,
+        "streamingPlatform": null
+      },
+      {
+        "id": 104,
+        "date": "2025-02-17",
+        "headline": "A Thousand Blows",
+        "summary": "Streaming on: Disney+Episodes watched: 6 out of 6 Steven Knight certainly knows...",
+        "image": null,
+        "streamingPlatform": "disney"
+      },
+      {
+        "id": 105,
+        "date": "2025-02-17",
+        "headline": "The Last Of Us Season 2 Sets Premiere Date As HBO Reveals New Joel, Ellie, And Abby Character Posters",
+        "summary": "Buckle up, baby girl — it’s nearly time to go back to Jackson. Two...",
+        "image": null,
+        "streamingPlatform": "hbo"
+      },
+      {
+        "id": 106,
+        "date": "2025-02-17",
+        "headline": "Marvel Studios ‘Exploring’ MCU Comeback For Defenders Iron Fist, Luke Cage, And Jessica Jones",
+        "summary": "Despite the mixed response Captain America: Brave New World has been getting...",
+        "image": null,
+        "streamingPlatform": null
+      },
+      {
+        "id": 107,
+        "date": "2025-02-17",
+        "headline": "Zero Day",
+        "summary": "Streaming on: NetflixEpisodes viewed: 6 of 6 TV shows don’t get much more...",
+        "image": null,
+        "streamingPlatform": "netflix"
+      },
+      {
+        "id": 108,
+        "date": "2025-02-17",
+        "headline": "Dog Man",
+        "summary": "Brace yourself to enter the Captain Underpants cinematic universe. The...",
+        "image": null,
+        "streamingPlatform": null
       }
     ],
     "reviews": [

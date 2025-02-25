@@ -1,4 +1,5 @@
 .nav {
+    $self:&;
     width:100%;
     height:var(--MainNavigationHeight);
     background-color:brown;
@@ -41,7 +42,8 @@
         color:var(--MainNagivationTextColor);
 
         &:hover {
-            
+            color:#fff;
+            cursor: pointer;
         }
 
     }
