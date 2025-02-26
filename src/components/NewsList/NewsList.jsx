@@ -36,4 +36,4 @@ function NewsItem({ item }) {
     );
   }
   
-  export default NewsList;
+  export default NewsList; 

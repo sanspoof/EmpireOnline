@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Button.module.scss";
 
-function MyButton() {
+function MyButton({text}) {
 
   const [likes, setLikes] = useState(0);
 
@@ -15,7 +15,9 @@ function MyButton() {
       onClick={handleClick}
       className={styles.button}
       type='button'
-      ><span className={styles.button__lbl}>I'm</span> a button</button>
+      >
+        {text}
+      </button>
     );
   }
 

@@ -15,7 +15,7 @@ function App() {
     <DataProvider>
         <MainNavigation />
         <HeroHeader />
-        <MyButton />
+        <MyButton text="Hello" />
         <NewsList/>
     </DataProvider>
     </>

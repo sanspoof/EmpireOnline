@@ -1,4 +1,40 @@
 .heroheader {
-    height:300px;
+    --height:600px;
+    height:var(--height);
     background-color: peru;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap:0px; 
+
+    &__info {
+        display: grid;
+        justify-items: start;
+        gap:12px;
+    }
+
+    &__title {
+        font-size: 4.875rem;
+        line-height: 1;
+        color:#fff;
+        font-weight: var(--fontweight--bold);
+    }
+
+    &__dash {
+        width:35px;
+        height:4px;
+        background-color: #fff;
+    }
+
+    &__subtitle {
+        font-size: 1.5rem;
+        color:#fff;
+        font-weight: var(--fontweight--light);
+    }
+
+    &__imgwrap {
+        background-color: rosybrown;
+        height:100%;
+    }
+
 }
