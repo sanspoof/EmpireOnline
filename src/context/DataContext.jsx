@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import data from "../appData.json";
+import data from "../db.json";
 
 const DataContext = createContext(data);
 

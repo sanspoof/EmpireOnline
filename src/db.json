@@ -2,10 +2,10 @@
     "mainCards": [
       {
         "id": 1,
-        "title": "Welcome to the app",
-        "subtitle": "This is a simple app to demonstrate the use of AngularJS",
+        "title": "Arrival",
+        "subtitle": "Linguistics professor Louise Banks (Amy Adams) leads an elite team of investigators when gigantic spaceships touch down in 12 locations around the world.",
         "cta": "Read the Review",
-        "image": null
+        "image": "/Images/arrival.png"
       },
       {
         "id": 2,
@@ -29,7 +29,24 @@
         "headline": "Captain America: Brave New World Makes $192 Million On Opening Weekend",
         "summary": "A lot was riding on Captain America: Brave New World this weekend. It’s been...",
         "image": null,
-        "streamingPlatform": null
+        "streamingPlatform": null,
+        "people": [
+          {
+            "id": 1,
+            "name": "Chris Evans",
+            "role": "Actor"
+          },
+          {
+            "id": 2,
+            "name": "Anthony Mackie",
+            "role": "Actor"
+          },
+          {
+            "id": 3,
+            "name": "Kari Skogland",
+            "role": "Director"
+          }
+        ]
       },
       {
         "id": 102,
@@ -37,7 +54,25 @@
         "headline": "Micky 17",
         "summary": "No-one is better than director Bong Joon Ho at using the rules of genre filmmaking against his audience. In the extraordinary Parasite, he engineered a mid-film switch from social comedy to something much darker and more outrageous; in Snowpiercer, it emerged that the revolutionary struggle we’d been rooting for was only a fraction of the true battle for survival. Now, in Mickey 17, he tackles space travel and the colonisation of alien worlds. If it’s a more conventional film than his best work, he still finds ways to subvert our expectations and continually surprise us with a hero who’s just trying his inadequate best.",
         "image": null,
-        "streamingPlatform": null
+        "streamingPlatform": null,
+        "people": [
+          {
+            "id": 1,
+            "name": "Bong Joon Ho",
+            "role": "Director"
+          },
+          {
+            "id": 2,
+            "name": "Song Kang Ho",
+            "role": "Actor"
+          },
+          {
+            "id": 3,
+            "name": "Youn Yuh Jung",
+            "role": "Actor"
+          }
+        ]
+
       },
       {
         "id": 103,
@@ -45,7 +80,19 @@
         "headline": "Aimee Lou Wood & Nabhaan Rizwan Lead BBC Comedy Drama ‘Film Club’ — See Exclusive First-Look Photos",
         "summary": "Aimee Lou Wood is having quite the moment right about now. Having burst onto...",
         "image": null,
-        "streamingPlatform": null
+        "streamingPlatform": null,
+        "people": [
+          {
+            "id": 1,
+            "name": "Aimee Lou Wood",
+            "role": "Actor"
+          },
+          {
+            "id": 2,
+            "name": "Nabhaan Rizwan",
+            "role": "Actor"
+          }
+        ]
       },
       {
         "id": 104,
@@ -53,7 +100,14 @@
         "headline": "A Thousand Blows",
         "summary": "Streaming on: Disney+Episodes watched: 6 out of 6 Steven Knight certainly knows...",
         "image": null,
-        "streamingPlatform": "disney"
+        "streamingPlatform": "disney",
+        "people": [
+          {
+            "id": 1,
+            "name": "Steven Knight",
+            "role": "Director"
+          }
+        ]
       },
       {
         "id": 105,
@@ -61,7 +115,24 @@
         "headline": "The Last Of Us Season 2 Sets Premiere Date As HBO Reveals New Joel, Ellie, And Abby Character Posters",
         "summary": "Buckle up, baby girl — it’s nearly time to go back to Jackson. Two...",
         "image": null,
-        "streamingPlatform": "hbo"
+        "streamingPlatform": "hbo",
+        "people": [
+          {
+            "id": 1,
+            "name": "Pedro Pascal",
+            "role": "Actor"
+          },
+          {
+            "id": 2,
+            "name": "Bella Ramsey",
+            "role": "Actor"
+          },
+          {
+            "id": 3,
+            "name": "Gabriel Luna",
+            "role": "Actor"
+          }
+        ]
       },
       {
         "id": 106,
@@ -69,7 +140,24 @@
         "headline": "Marvel Studios ‘Exploring’ MCU Comeback For Defenders Iron Fist, Luke Cage, And Jessica Jones",
         "summary": "Despite the mixed response Captain America: Brave New World has been getting...",
         "image": null,
-        "streamingPlatform": null
+        "streamingPlatform": null,
+        "people": [
+          {
+            "id": 1,
+            "name": "Finn Jones",
+            "role": "Actor"
+          },
+          {
+            "id": 2,
+            "name": "Mike Colter",
+            "role": "Actor"
+          },
+          {
+            "id": 3,
+            "name": "Krysten Ritter",
+            "role": "Actor"
+          }
+        ]
       },
       {
         "id": 107,
@@ -77,7 +165,14 @@
         "headline": "Zero Day",
         "summary": "Streaming on: NetflixEpisodes viewed: 6 of 6 TV shows don’t get much more...",
         "image": null,
-        "streamingPlatform": "netflix"
+        "streamingPlatform": "netflix",
+        "people": [
+          {
+            "id": 1,
+            "name": "Morten Tyldum",
+            "role": "Director"
+          }
+        ]
       },
       {
         "id": 108,
@@ -85,7 +180,14 @@
         "headline": "Dog Man",
         "summary": "Brace yourself to enter the Captain Underpants cinematic universe. The...",
         "image": null,
-        "streamingPlatform": null
+        "streamingPlatform": null,
+        "people": [
+          {
+            "id": 1,
+            "name": "David Soren",
+            "role": "Director"
+          }
+        ]
       }
     ],
     "reviews": [
