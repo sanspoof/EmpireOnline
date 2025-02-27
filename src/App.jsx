@@ -6,6 +6,7 @@ import MyButton from './components/Button/Button';
 import HeroHeader from './components/HeroHeader/HeroHeader';
 import MainNavigation from './components/MainNavigation/MainNavigation';
 import NewsList from './components/NewsList/NewsList';
+import ReviewList from './components/ReviewList/ReviewList';
 import { DataProvider } from "./context/DataContext";
 
 function App() {
@@ -15,8 +16,8 @@ function App() {
     <DataProvider>
         <MainNavigation />
         <HeroHeader />
-        <MyButton text="Hello" />
         <NewsList/>
+        <ReviewList/>
     </DataProvider>
     </>
   )
