@@ -9,10 +9,10 @@
       },
       {
         "id": 2,
-        "title": "Top 10 Movies of 2025",
-        "subtitle": "Here are the best movies of the year so far!",
-        "cta": "See the List",
-        "image": null
+        "title": "Interstellar",
+        "subtitle": "In Earth's future, a global crop blight and second Dust Bowl are slowly rendering the planet uninhabitable.",
+        "cta": "Read the Review",
+        "image": "/Images/interstellar.webp"
       },
       {
         "id": 3,

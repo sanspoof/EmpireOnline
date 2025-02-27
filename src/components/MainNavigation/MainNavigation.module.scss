@@ -6,6 +6,7 @@
     align-items: center;
     display: flex;
     border-bottom:1px solid var(--MainNavigationBorderColor);
+    z-index: 100;
 
     &__logowrapper {
         padding-left:20px;

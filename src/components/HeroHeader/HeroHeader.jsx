@@ -5,18 +5,21 @@ import { useData } from "../../context/DataContext";
 function HeroHeader() {
 
     let data = useData();
+    let indextouse = 0;
+    
+    const { title, subtitle, cta, image } = data.mainCards[indextouse];
 
     return (
       <div className={styles.heroheader}>
         
         <div className={styles.heroheader__info}> 
-            <div className={styles.heroheader__title}>{data.mainCards[0].title}</div>
+            <div className={styles.heroheader__title}>{title}</div>
             <span className={styles.heroheader__dash}></span>
-            <div className={styles.heroheader__subtitle}>{data.mainCards[0].subtitle}</div>
-            <MyButton text={data.mainCards[0].cta}/>
+            <div className={styles.heroheader__subtitle}>{subtitle}</div>
+            <MyButton text={cta}/>
         </div>
         <div className={styles.heroheader__imgwrap}>
-            <img src={data.mainCards[0].image} alt={data.mainCards[0].title} className={styles.heroheader__img}/>
+            <img src={image} alt={title} className={styles.heroheader__img}/>
         </div>
       </div>
     );
