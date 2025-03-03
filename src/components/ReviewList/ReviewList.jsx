@@ -1,6 +1,7 @@
 import styles from "./ReviewsList.module.scss";
 import { useData } from "../../context/DataContext";
 
+
 function ReviewItem({ item }) {
 
     let maxSummaryCount = 190;
@@ -18,6 +19,8 @@ function ReviewItem({ item }) {
   }
   
   function ReviewList() {
+
+
 
     const data = useData(useData)
 
