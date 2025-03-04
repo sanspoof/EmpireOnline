@@ -26,7 +26,11 @@ export const ContentfulProvider = ({ children }) => {
 
       setContent((prev) => ({
         ...prev,
-        [contentType]: response.items.map((item) => item.fields), // Store all items as an array
+        [contentType]: response.items.map((item) => ({
+          id: item.sys.id, //  Store sys.id
+          created: item.sys.createdAt, //  Store sys.createdAt
+          ...item.fields,   //  Keep the fields
+        })),
       }));
     } catch (error) {
       console.error(`Error fetching ${contentType}:`, error);

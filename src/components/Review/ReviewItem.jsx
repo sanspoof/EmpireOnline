@@ -2,7 +2,7 @@ import styles from './ReviewItem.module.scss';
 
 function ReviewItem({ data, reviewpage }) {
 
-  const { date, title, subtitle, reviewbody, summary, reviewrating } = data;
+  const { created, title, subtitle, reviewbody, summary, reviewrating } = data;
 
   const reviewContent = reviewbody.content;
 
@@ -11,7 +11,7 @@ function ReviewItem({ data, reviewpage }) {
 
 
     if (reviewpage === true) {
-        console.log("Reviewpage")
+        console.log("Reviewpage");
     }
 
     return content.map((el, index) => {
@@ -39,7 +39,7 @@ function ReviewItem({ data, reviewpage }) {
 
   return (
     <div className={styles.review}>
-      <p className={styles.review__date}></p>
+      <p className={styles.review__date}>{created}</p>
       <h3 className={styles.review__title}>{title}</h3>
       <h3 className={styles.review__subtitle}>{subtitle}</h3>
       <div className={styles.review__contentwrap}>
