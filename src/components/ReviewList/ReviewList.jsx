@@ -1,43 +1,30 @@
-import styles from "./ReviewsList.module.scss";
-import { useData } from "../../context/DataContext";
+import React, { useContext, useEffect } from 'react';
+import { ContentfulContext } from './../../context/ContentfulContext';
+import css from './ReviewsList.module.scss';
+import ReviewItem from '../Review/ReviewItem';
 
+// ReviewList Component
+function ReviewList() {
+  const { content, fetchContent, loading } = useContext(ContentfulContext);
 
-function ReviewItem({ item }) {
+  useEffect(() => {
+    fetchContent('reviews'); // Fetch review items from Contentful
+  }, [fetchContent]);
 
-    let maxSummaryCount = 190;
+  // Get reviews from the context
+  const reviews = content['reviews']; // contenful content type
 
-    const { title, date, content, rating } = item;
+  if (loading['reviews']) return <div>Loading...</div>;  // Show loading state
+  if (!reviews || reviews.length === 0) return <div>No data available</div>;  // Handle empty state
 
-    return (
-      <div className={styles.reviewitem}>
-        <p className={styles.reviewitem__date}>{date}</p>
-        <h3 className={styles.reviewitem__title}>{title}</h3>
-        <p className={styles.reviewitem__content}>{content}</p>
-        <p className={styles.reviewitem__rating}>{rating}</p>
-      </div>
-    );
-  }
-  
-  function ReviewList() {
+  return (
+    <div className={css.reviewlist}>
+      {reviews.map((review, index) => (
+        // Pass the fields from Contentful as props to the ReviewItem component
+        <ReviewItem key={index} data={review} reviewpage={false} />
+      ))}
+    </div>
+  );
+}
 
-
-
-    const data = useData(useData)
-
-    return (
-      <>
-      <div className={styles.newslist}>
-
-        {data.reviews.map( (el) => (
-          <ReviewItem 
-          key={el.id} 
-          item={el} 
-          /> 
-        ))}
-        
-      </div>
-      </>
-    );
-  }
-  
-  export default ReviewList; 
+export default ReviewList;

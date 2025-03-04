@@ -1,20 +1,6 @@
-.reviewitem {
-    background-color:purple;
 
-    &__date {
 
-    }
-
-    &__title {
-
-    }
-
-    &__content {
-
-    }
-
-    &__rating {
-        
-    } 
-
+.reviewlist {
+    display:grid;
+    gap:10px;
 }
