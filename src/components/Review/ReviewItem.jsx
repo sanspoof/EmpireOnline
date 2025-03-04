@@ -1,6 +1,6 @@
 import styles from './ReviewItem.module.scss';
 
-function ReviewItem({ data, reviewpage }) {
+function ReviewItem({ data, isReviewPage }) {
 
   const { created, title, subtitle, reviewbody, summary, reviewrating } = data;
 
@@ -10,7 +10,7 @@ function ReviewItem({ data, reviewpage }) {
   const renderContent = (content) => {
 
 
-    if (reviewpage === true) {
+    if (isReviewPage === true) {
         console.log("Reviewpage");
     }
 

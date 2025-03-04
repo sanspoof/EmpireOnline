@@ -20,8 +20,6 @@ function ReviewList() {
   
   if (!reviews || reviews.length === 0) return <div>No data available</div>;  // Handle empty state
 
-  console.log(reviews);
-
   return (
     <div className={css.reviewlist}>
       {reviews.map((review) => (
@@ -29,7 +27,7 @@ function ReviewList() {
         <ReviewItem 
             key={review.id} 
             data={review} 
-            reviewpage={false} 
+            isReviewPage={false} 
         />
       ))}
     </div>
