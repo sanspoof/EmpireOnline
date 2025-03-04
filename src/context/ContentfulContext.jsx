@@ -1,10 +1,11 @@
 import React, { createContext, useState, useEffect, useCallback } from 'react';
 import { createClient } from 'contentful';
 
+
 // Initialize Contentful client
 const client = createClient({
-  space: '62qazwxhzqwq',
-  accessToken: 'mtm6vmBbMpY9F_9bTcm7AjoirdN-j4zofvqrmWwq1CI',
+  space: import.meta.env.VITE_CONTENTFUL_SPACE,
+  accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN,
   environment: 'master',
 });
 

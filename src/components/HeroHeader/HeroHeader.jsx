@@ -41,6 +41,4 @@ function HeroHeader() {
   );
 }
 
-
-
-  export default HeroHeader;
+export default HeroHeader;
