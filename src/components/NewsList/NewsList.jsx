@@ -1,33 +1,35 @@
 import styles from "./NewsList.module.scss";
 import { useData } from "../../context/DataContext";
-
-function NewsItem({ item }) {
-
-    let maxSummaryCount = 190;
-    let summary = item.summary;
-
-    return (
-      <div className={styles.newsitem}>
-        <p>{item.date}</p>
-        <h3>{item.headline}</h3> 
-        <p>{summary.slice(0, maxSummaryCount) + (summary.length > maxSummaryCount ? "..." : "")}</p> 
-        { item.streamingPlatform && <p>{item.streamingPlatform}</p> } 
-      </div>
-    );
-  }
+import NewsItem from "../NewsItem/NewsItem";
+import React, { useContext, useEffect } from 'react';
+import { ContentfulContext } from './../../context/ContentfulContext';
   
   function NewsList() {
 
-    const data = useData(useData)
+  const { content, fetchContent, loading } = useContext(ContentfulContext);
+
+  useEffect(() => {
+
+    fetchContent('newsItem'); // Fetch review items from Contentful
+
+  }, [fetchContent]);
+
+  // Get reviews from the context
+  const news = content['newsItem']; // contenful content type
+
+  if (loading['newsItem']) return <div>Loading...</div>;  // Show loading state
+  
+  if (!news || news.length === 0) return <div>No data available</div>;  // Handle empty state
+
 
     return (
       <>
       <div className={styles.newslist}>
 
-        {data.news.map((newsItem) => (
+        {news.map((newsItem) => (
           <NewsItem 
           key={newsItem.id} 
-          item={newsItem} 
+          data={newsItem}
           /> 
         ))}
         

@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from 'react';
 import { ContentfulContext } from './../../context/ContentfulContext';
 import css from './ReviewsList.module.scss';
-import ReviewItem from '../Review/ReviewItem';
-
+import ReviewItem from '../ReviewItem/ReviewItem';
+ 
 // ReviewList Component
 function ReviewList() {
   const { content, fetchContent, loading } = useContext(ContentfulContext);

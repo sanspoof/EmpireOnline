@@ -9,7 +9,6 @@ function ReviewItem({ data, isReviewPage }) {
   // Function to render the content based on nodeType
   const renderContent = (content) => {
 
-
     if (isReviewPage === true) {
         console.log("Reviewpage");
     }
