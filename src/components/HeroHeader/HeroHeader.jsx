@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import styles from "./heroheader.module.scss";
-import MyButton from "../Button/Button";
+import MyButton from "../UI/Button/Button";
 import { ContentfulContext } from './../../context/ContentfulContext';
 
 function HeroHeader() {

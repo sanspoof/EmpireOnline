@@ -1,5 +1,5 @@
 import styles from "./NewsList.module.scss";
-import { useData } from "../../context/DataContext";
+//import { useData } from "../../context/DataContext";
 import NewsItem from "../NewsItem/NewsItem";
 import React, { useContext, useEffect } from 'react';
 import { ContentfulContext } from './../../context/ContentfulContext';
