@@ -19,21 +19,21 @@ function HeroHeader() {
   // show as main set in contentful
   const mainItem = banners.find(item => item.showAsMain === true);
 
-  console.log(mainItem);
+  const { mainTitle, mainSubtitle, mainCallToActionButtonText, mainBannerImage } = mainItem;
 
   return (
     <div className={styles.heroheader}>
       <div className={styles.heroheader__info}>
-        <div className={styles.heroheader__title}>{mainItem.mainTitle}</div>
+        <div className={styles.heroheader__title}>{mainTitle}</div>
         <span className={styles.heroheader__dash}></span>
-        <div className={styles.heroheader__subtitle}>{mainItem.mainSubtitle}</div>
-        <MyButton text={mainItem.mainCallToActionButtonText} />
+        <div className={styles.heroheader__subtitle}>{mainSubtitle}</div>
+        <MyButton text={mainCallToActionButtonText} />
       </div>
       <div className={styles.heroheader__imgwrap}>
-        {mainItem.mainBannerImage && (
+        {mainBannerImage && (
           <img
-            src={mainItem.mainBannerImage.fields.file.url}
-            alt={mainItem.mainTitle}
+            src={mainBannerImage.fields.file.url}
+            alt={mainTitle}
             className={styles.heroheader__img}
           />
         )}
