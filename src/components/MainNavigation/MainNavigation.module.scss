@@ -1,22 +1,31 @@
 .nav {
+    --MainNavigationBorderColor:var(--col-gray-alpha);
+    --offset:10px;
     $self:&;
-    width:100%;
+    width:calc(100% - var(--offset) * 2);
+    border-radius: 4px;
+    position:fixed;
+    left:var(--offset);
+    right:var(--offset);
+    top:var(--offset);
     height:var(--MainNavigationHeight);
-    background-color:brown;
+    background-color:#0A0A0AF5;
     align-items: center;
     display: flex;
-    border-bottom:1px solid var(--MainNavigationBorderColor);
+    border:1px solid var(--MainNavigationBorderColor);
     z-index: 100;
+
 
     &__logowrapper {
         padding-left:20px;
         display: flex;
         align-items: end;
-        gap:4px;
+        gap:8px;
+        text-decoration: none;
     }
 
     &__logo {
-        width:124px;
+        width:105px;
     }
 
     &__logotxt {
@@ -25,6 +34,7 @@
         font-weight: 400;
         font-style: italic;
         line-height: 0.7rem;
+        
     }
 
     &__navitemwrap {
@@ -41,6 +51,8 @@
         height:100%;
         border-left:1px solid var(--MainNavigationBorderColor);
         color:var(--MainNagivationTextColor);
+        text-decoration: none;
+        font-size:0.875rem;
 
         &:hover {
             color:#fff;

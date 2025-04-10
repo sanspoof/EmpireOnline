@@ -1,7 +1,6 @@
 .heroheader {
-    --height:600px;
+    --height:640px;
     height:var(--height);
-    background-color: peru;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -45,6 +44,7 @@
         letter-spacing: 0.04rem;
         color:#fff;
         font-weight: var(--fontweight--light);
+        text-decoration: none;
     }
 
     &__imgwrap {

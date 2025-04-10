@@ -1,7 +1,4 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HeroHeader from './components/HeroHeader/HeroHeader';
 import MainNavigation from './components/MainNavigation/MainNavigation';
 import NewsList from './components/NewsList/NewsList';
@@ -9,20 +6,38 @@ import ReviewList from './components/ReviewList/ReviewList';
 import { ContentfulProvider } from './context/ContentfulContext';
 import { DataProvider } from "./context/DataContext";
 
-function App() {
-  
+function HomePage() {
   return (
     <>
-    <ContentfulProvider>
-    <DataProvider>
-        <MainNavigation />
-        <HeroHeader />
-        <NewsList/>
-        <ReviewList/>
-    </DataProvider>
-    </ContentfulProvider>
+      <HeroHeader />
+      <NewsList />
+      <ReviewList />
     </>
-  )
+  );
 }
 
-export default App
+function MoviesPage() {
+  return (
+    <>
+      <HeroHeader />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <ContentfulProvider>
+      <DataProvider>
+        <BrowserRouter>
+          <MainNavigation />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/movies" element={<MoviesPage />}  />
+          </Routes>
+        </BrowserRouter>
+      </DataProvider>
+    </ContentfulProvider>
+  );
+}
+
+export default App;
