@@ -1,4 +1,3 @@
-import { useData } from "../../context/DataContext";
 import styles from "./NewsItem.module.scss";
 
 function NewsItem({ data }) {

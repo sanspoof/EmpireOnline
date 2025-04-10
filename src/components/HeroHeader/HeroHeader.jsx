@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react';
 import styles from "./heroheader.module.scss";
 import MyButton from "../UI/Button/Button";
 import { ContentfulContext } from './../../context/ContentfulContext';
+import Loading from '../UI/LoadingSpinner/LoadingSpinner';
 
 function HeroHeader() {
 
@@ -13,7 +14,7 @@ function HeroHeader() {
 
   const banners = content['homepageBanner']; // Expecting an array
 
-  if (loading['homepageBanner']) return <div>Loading...</div>;
+  if (loading['homepageBanner']) return <Loading/>;
   if (!banners || banners.length === 0) return <div>No data available</div>;
 
   // show as main set in contentful
