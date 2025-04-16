@@ -1,8 +1,12 @@
-.review {
+.reviewitem {
     background-color:purple;
 
     &__date {
 
+    }
+
+    &__p {
+        background-color: red;
     }
 
     &__title {

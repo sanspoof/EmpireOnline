@@ -1,9 +1,29 @@
 :root {
-    --appFont:"bio-sans", sans-serif;
+    //--appFont:"bio-sans", sans-serif;
 
-    --MainNavigationHeight:64px;
+    --appFont:"roc-grotesk",sans-serif; //300/400/700
+    --appFontCondensed:"roc-grotesk-condensed",sans-serif;//400/700
+    --appFontWide:"roc-grotesk-wide",sans-serif;//400/600/700
+    --appFontExtraWide:"roc-grotesk-extrawide",sans-serif;//700
+
+    --appFont--light:300;
+    --appFont--regular:400;
+    --appFont--bold:700;
+
+    --appFontCondensed--regular:400;
+    --appFontCondensed--bold:700;
+
+    --appFontWide--regular:400;
+    --appFontWide--medium:600;
+    --appFontWide--bold:700;
+
+    --appFontExtraWide--bold:700;
+
+    --MainNavigationLogoHeight:45px;
+    --MainNavigationHeight:var(--MainNavigationLogoHeight);
+    --MainNavigationHeight--Scrolled:64px;
     --MainNavigationBorderColor:#B3B3B3;
-    --MainNagivationTextColor:#ccc;
+    --MainNagivationTextColor:#fff;
 
     --fontweight--light:300;
     --fontweight--regular:400;
@@ -17,5 +37,7 @@
     --col-NavBackground:#0A0A0A;
 
     --col-gray-alpha:rgba(255 255 255 / 14%);
+
+    --pageSidePadding:32px;
 
 }

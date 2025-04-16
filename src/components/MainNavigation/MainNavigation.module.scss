@@ -1,64 +1,65 @@
 .nav {
     --MainNavigationBorderColor:var(--col-gray-alpha);
-    --offset:10px;
+    --offset:20px;
     $self:&;
-    width:calc(100% - var(--offset) * 2);
-    border-radius: 4px;
-    position:fixed;
-    left:var(--offset);
-    right:var(--offset);
-    top:var(--offset);
     height:var(--MainNavigationHeight);
+    margin-bottom:var(--offset);
     background-color:#0A0A0AF5;
     align-items: center;
+    justify-content: space-between;
     display: flex;
-    border:1px solid var(--MainNavigationBorderColor);
     z-index: 100;
 
-
     &__logowrapper {
-        padding-left:20px;
+
         display: flex;
-        align-items: end;
-        gap:8px;
-        text-decoration: none;
+        align-self: flex-end;
+        height:45px;
     }
 
     &__logo {
-        width:105px;
-    }
-
-    &__logotxt {
-        font-size:0.7rem;
-        color:#fff;
-        font-weight: 400;
-        font-style: italic;
-        line-height: 0.7rem;
-        
+        height:100%;
+        fill:#fff;
     }
 
     &__navitemwrap {
         display: flex;
+        align-items: flex-end;
+        gap:16px;
         height:100%;
         margin-left:auto;
     }
 
     &__navitem {
-        display: flex;
-        align-items: center;
-        text-transform: uppercase;
-        padding:0px 24px;
         height:100%;
-        border-left:1px solid var(--MainNavigationBorderColor);
+        text-transform: uppercase;
         color:var(--MainNagivationTextColor);
         text-decoration: none;
         font-size:0.875rem;
+        font-family: var(--appFontWide);
+        font-weight: var(--appFontWide--medium);
+        display: flex;
+        align-items: flex-end;
+        line-height:0.5rem;
+
 
         &:hover {
-            color:#fff;
+            text-decoration: underline;
+            text-underline-offset: 4px;
             cursor: pointer;
+            
         }
 
+    }
+
+    &--scrolling {
+        position: fixed;
+        width:calc(100% - var(--offset) * 2);
+        border-radius: 4px;
+        left:var(--offset);
+        right:var(--offset);
+        top:var(--offset);
+        height:var(--MainNavigationHeight--Scrolled);
     }
 
 }

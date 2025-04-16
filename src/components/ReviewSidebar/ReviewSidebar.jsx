@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react';
-import { ContentfulContext } from './../../context/ContentfulContext';
-import css from './ReviewsList.module.scss';
-import ReviewItem from '../ReviewItem/ReviewItem';
+import { ContentfulContext } from '../../context/ContentfulContext';
+import css from './ReviewSidebar.module.scss';
+import ReviewItem from './ReviewItem'; 
 import Loading from '../UI/LoadingSpinner/LoadingSpinner';
  
 // ReviewList Component
-function ReviewList() {
+function ReviewSidebar() {
 
   const { content, fetchContent, loading } = useContext(ContentfulContext);
 
@@ -23,7 +23,7 @@ function ReviewList() {
   if (!reviews || reviews.length === 0) return <div>No data available</div>;  // Handle empty state
 
   return (
-    <div className={css.reviewlist}>
+    <div className={css.reviewsidebar}>
       {reviews.map((review) => (
         // Passes the fields from Contentful as props to the ReviewItem component
         <ReviewItem 
@@ -36,4 +36,4 @@ function ReviewList() {
   );
 }
 
-export default ReviewList;
+export default ReviewSidebar;

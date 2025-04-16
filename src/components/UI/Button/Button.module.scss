@@ -5,10 +5,12 @@
     border:none;
     height:42px;
     padding:0px 16px;
-    font-size:1rem;
+    font-size:0.875rem;
     letter-spacing: 0.04rem;
     border-radius: 2px;
-    font-weight: var(--fontweight--bold);
+    font-weight: var(--appFontWide--medium);
+    font-family: var(--appFontWide);
+
 
     &:hover {
         cursor: pointer;
