@@ -3,7 +3,6 @@
     --offset:20px;
     $self:&;
     height:var(--MainNavigationHeight);
-    margin-bottom:var(--offset);
     background-color:#0A0A0AF5;
     align-items: center;
     justify-content: space-between;
@@ -31,7 +30,6 @@
     }
 
     &__navitem {
-        height:100%;
         text-transform: uppercase;
         color:var(--MainNagivationTextColor);
         text-decoration: none;
@@ -39,13 +37,14 @@
         font-family: var(--appFontWide);
         font-weight: var(--appFontWide--medium);
         display: flex;
-        align-items: flex-end;
-        line-height:0.5rem;
+        align-items: center;
 
 
         &:hover {
             text-decoration: underline;
-            text-underline-offset: 4px;
+            text-underline-offset: 5px;
+            text-decoration-thickness: 2px;
+            text-decoration-color: var(--colBrandRed);
             cursor: pointer;
             
         }

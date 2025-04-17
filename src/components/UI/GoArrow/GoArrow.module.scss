@@ -1,0 +1,12 @@
+.goarrow {
+    width:30px;
+    height:30px;
+    fill:#fff;
+    transform:rotate(-45deg);
+
+    &:hover {
+        cursor: pointer;
+        transform:rotate(0deg)
+    }
+
+}

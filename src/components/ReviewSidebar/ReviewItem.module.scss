@@ -21,8 +21,13 @@
 
     }
 
-    &__rating {
-        
+    &__ratingcontainer {
+        display: flex;
+        justify-content: space-between;
     } 
+
+    &__ratingstars {
+        
+    }
 
 }

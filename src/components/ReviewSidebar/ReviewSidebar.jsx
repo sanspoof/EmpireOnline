@@ -29,7 +29,6 @@ function ReviewSidebar() {
         <ReviewItem 
             key={review.id} 
             data={review} 
-            isReviewPage={false} 
         />
       ))}
     </div>
