@@ -3,32 +3,33 @@ import { ContentfulContext } from '../../context/ContentfulContext';
 import css from './ReviewSidebar.module.scss';
 import ReviewItem from './ReviewItem'; 
 import Loading from '../UI/LoadingSpinner/LoadingSpinner';
+import ErrorMessage from '../UI/ErrorMessage/ErrorMessage';
+import EmptyState from '../UI/EmptyState/EmptyState';
  
-// ReviewList Component
 function ReviewSidebar() {
 
-  const { content, fetchContent, loading } = useContext(ContentfulContext);
+  const { content, fetchContent, loading, error } = useContext(ContentfulContext);
 
   useEffect(() => {
 
-    fetchContent('reviews'); // Fetch review items from Contentful
-
+    fetchContent('reviews');
+    
   }, [fetchContent]);
 
-  // Get reviews from the context
-  const reviews = content['reviews']; // contenful content type
+  const reviews = content['reviews'];
 
-  if (loading['reviews']) return <Loading/>;  // Show loading state
-  
-  if (!reviews || reviews.length === 0) return <div>No data available</div>;  // Handle empty state
+  if (loading['reviews']) return <Loading />;
+
+  if (error?.reviews) return <ErrorMessage message="Failed to load reviews." />;
+
+  if (!reviews || reviews.length === 0) return <EmptyState message="No reviews available." />;
 
   return (
     <div className={css.reviewsidebar}>
       {reviews.map((review) => (
-        // Passes the fields from Contentful as props to the ReviewItem component
         <ReviewItem 
-            key={review.id} 
-            data={review} 
+          key={review.id} 
+          data={review} 
         />
       ))}
     </div>

@@ -14,9 +14,7 @@ function ReviewItem({ data }) {
       {/* <h4 className={styles.reviewitem__subtitle}>{subtitle}</h4> */}
       <p className={styles.reviewitem__summary}>{summary}</p> 
       <div className={styles.reviewitem__ratingcontainer}>
-        <div className={styles.reviewitem__ratingstars}>
           <RatingStars rating={reviewrating} /> 
-        </div>
         <a href="#" className={styles.reviewitem__readmore}>
           <GoArrow />
         </a>

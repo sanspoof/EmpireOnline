@@ -1,5 +1,8 @@
 .reviewitem {
     background-color:purple;
+    font-family: var(--appFont);
+    display: grid;
+    gap:4px;
 
     &__date {
 
@@ -9,16 +12,21 @@
         background-color: red;
     }
 
+    &__img {
+        max-width:300px;
+    }
+
     &__title {
+        font-size: 1.25rem;
+        font-weight: var(--appFont--bold);
         color:#fff;
     }
 
-    &__contentwrap {
-
-    }
-
-    &__content {
-
+    &__summary {
+        color:#fff;
+        font-size:0.875rem;
+        line-height: 1.125rem;
+        font-weight: var(--appFont--light);
     }
 
     &__ratingcontainer {
