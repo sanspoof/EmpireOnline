@@ -1,3 +1,3 @@
-# Empire Online
+# Empire REDUX
 
-Learning React with Movies
+React with Movies
