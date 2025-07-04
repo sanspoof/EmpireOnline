@@ -2,7 +2,6 @@
 import NewsItem from "../NewsItem/NewsItem";
 import React, { useContext, useEffect } from 'react';
 import { ContentfulContext } from './../../context/ContentfulContext';
-import styles from "./NewsList.module.scss";
   
   function NewsList() {
 
@@ -24,7 +23,7 @@ import styles from "./NewsList.module.scss";
 
     return (
       <>
-      <div className={styles.newslist}>
+      <div className="grid gap-2 bg-yellow-600">
 
         {news.map((newsItem) => (
           <NewsItem 

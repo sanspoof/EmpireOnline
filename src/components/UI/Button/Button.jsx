@@ -1,5 +1,4 @@
 import { useState } from "react";
-import styles from "./Button.module.scss";
 
 function MyButton({text}) {
 
@@ -13,7 +12,7 @@ function MyButton({text}) {
     return (
       <button
       onClick={handleClick}
-      className={styles.button}
+      className="bg-brand text-white py-2 px-4 rounded"
       type='button'
       >
         {text}

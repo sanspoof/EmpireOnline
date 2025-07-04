@@ -8,7 +8,7 @@ function ReviewItem({ data }) {
 
   return (
     <div className={styles.reviewitem}>
-      <p className={styles.reviewitem__date}>{created}</p>
+      {/* <p className={styles.reviewitem__date}>{created}</p> */}
       <img className={styles.reviewitem__img} src={heroImage.fields.file.url} alt={title} />
       <h3 className={styles.reviewitem__title}>{title}</h3>
       {/* <h4 className={styles.reviewitem__subtitle}>{subtitle}</h4> */}

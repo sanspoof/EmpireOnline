@@ -1,11 +1,9 @@
-import styles from "./NewsItem.module.scss";
-
 function NewsItem({ data }) {
 
     const { title, created, image } = data;
     
     return (
-      <div className={styles.newsitem}>
+      <div className="bg-amber-200">
         <p>{created}</p>
         <p>{title}</p>
         <img src={image.fields.file.url} alt={title} />

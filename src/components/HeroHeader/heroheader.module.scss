@@ -18,15 +18,13 @@
         font-size: 3.5rem;
         line-height: 1;
         color:#fff;
-        font-weight: var(--appFontWide--medium);
-        font-family: var(--appFontWide);
 
     }
 
     &__dash {
         width:35px;
         height:4px;
-        background-color:var(--colBrandRed);
+        background-color:#444;
         position:relative;
 
     }
@@ -36,8 +34,6 @@
         line-height:2rem;
         color:#fff;
         text-decoration: none;
-        font-weight: var(--appFont--regular);
-        font-family: var(--appFont);
     }
 
     &__imgwrap {

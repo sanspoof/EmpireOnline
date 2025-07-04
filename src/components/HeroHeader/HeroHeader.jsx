@@ -25,9 +25,9 @@ function HeroHeader() {
   return (
     <div className={styles.heroheader}>
       <div className={styles.heroheader__info}>
-        <div className={styles.heroheader__title}>{mainTitle}</div>
+        <div className="font-heroheader text-white text-5xl">{mainTitle}</div>
         <span className={styles.heroheader__dash}></span>
-        <div className={styles.heroheader__subtitle}>{mainSubtitle}</div>
+        <div className="font-body text-white text-lg/relaxed">{mainSubtitle}</div>
         <MyButton text={mainCallToActionButtonText} />
       </div>
       <div className={styles.heroheader__imgwrap}>

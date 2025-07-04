@@ -1,42 +1,59 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url("https://p.typekit.net/p.css?s=1&k=grz5seu&ht=tk&f=51571&a=314682734&app=typekit&e=css");
+
+@font-face {
+font-family:"roc-grotesk-variable";
+src:url("https://use.typekit.net/af/561615/0000000000000000774b970f/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/561615/0000000000000000774b970f/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/561615/0000000000000000774b970f/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:100 900;font-stretch:normal;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+
+@import "tailwindcss";
+
+@theme {
+      --color-brand:#AE1D1D;
+
+    --appFont:"roc-grotesk-variable",sans-serif; 
+
+    --MainNavigationHeight:var(--MainNavigationLogoHeight);
+    --MainNavigationHeight--Scrolled:64px;
+    --MainNavigationBorderColor:#B3B3B3;
+    --MainNagivationTextColor:#fff;
+
+    --fontweight--light:300;
+    --fontweight--regular:400;
+    --fontweight--medium:500;
+    --fontweight--bold:700;
+
+    --colBrandRed:#AE1D1D;
+
+    --col-pageBackground:#000000;
+    --col-NavBackground:#0A0A0A;
+
+    --col-gray-alpha:rgba(255 255 255 / 14%);
+
+    --pageSidePadding:32px;
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+      background-color: var(--col-pageBackground);
+      font-family: var(--appFont);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.font-empire-logo {
+  font-variation-settings: 'wdth' 150, 'wght' 498;
 }
 
-.card {
-  padding: 2em;
+.font-headings {
+  font-variation-settings: 'wdth' 100, 'wght' 700;
 }
 
-.read-the-docs {
-  color: #888;
+.font-heroheader {
+    font-variation-settings: 'wdth' 125, 'wght' 500;
 }
+
+.font-body {
+  font-variation-settings: 'wdth' 100, 'wght' 500;
+}
+
