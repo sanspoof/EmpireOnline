@@ -1,8 +1,6 @@
-import s from "./PageContent.module.scss";
-
-function PageContent({ children, className = '' }) {
+function PageContent({ children }) {
     return (
-      <main className={`${s.mainlayout} ${className}`}>
+      <main className="grid grid-cols-14">
         {children}
       </main>
     );

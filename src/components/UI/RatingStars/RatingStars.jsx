@@ -1,4 +1,4 @@
-import css from './RatingStars.module.scss';
+
 
 function RatingStars({rating}) {
 
@@ -7,20 +7,20 @@ function RatingStars({rating}) {
 
 
     if(rating === undefined || rating === null) {
-        return <div className={css.ratingstars}>No rating available</div>;
+        return <div className="">No rating available</div>;
     } else {
 
         return (
 
-            <div className={css.ratingstars}>
+            <div className="flex items-center gap-0.5">
               {/* Filled stars */}
               {Array.from({ length: rating }, (_, i) => (
-                <span className={css.star} key={`filled-${i}`}>{filledStar}</span>
+                <span className="size-6 fill-white" key={`filled-${i}`}>{filledStar}</span>
               ))} 
           
               {/* Empty stars to make up to 5 total */}
               {Array.from({ length: 5 - rating }, (_, i) => (
-                <span className={css.star} key={`empty-${i}`}>{emptyStar}</span>
+                <span className="size-6 fill-white" key={`empty-${i}`}>{emptyStar}</span>
               ))}
             </div>
     

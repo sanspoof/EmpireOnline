@@ -1,4 +1,3 @@
-import styles from './ReviewItem.module.scss';
 import RatingStars from '../UI/RatingStars/RatingStars';
 import GoArrow from '../UI/GoArrow/GoArrow';
 
@@ -7,15 +6,15 @@ function ReviewItem({ data }) {
 // Log the URL of the hero image
 
   return (
-    <div className={styles.reviewitem}>
+    <div className="grid gap-1 bg-purple-600">
       {/* <p className={styles.reviewitem__date}>{created}</p> */}
-      <img className={styles.reviewitem__img} src={heroImage.fields.file.url} alt={title} />
-      <h3 className={styles.reviewitem__title}>{title}</h3>
+      <img className="" src={heroImage.fields.file.url} alt={title} />
+      <h3 className="font-heroheader text-white ">{title}</h3>
       {/* <h4 className={styles.reviewitem__subtitle}>{subtitle}</h4> */}
-      <p className={styles.reviewitem__summary}>{summary}</p> 
-      <div className={styles.reviewitem__ratingcontainer}>
+      <p className="text-sm text-white">{summary}</p> 
+      <div className="flex items-center justify-between">
           <RatingStars rating={reviewrating} /> 
-        <a href="#" className={styles.reviewitem__readmore}>
+        <a href="#" className="">
           <GoArrow />
         </a>
       </div>

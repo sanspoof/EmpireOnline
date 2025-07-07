@@ -1,10 +1,8 @@
 // Loading.js
-import React from 'react';
-import css from './LoadingSpinner.module.scss';
 
 function Loading() {
   return (
-    <div className={css.loading}></div>
+    <div className="size-10 rounded-full border-4 border-white border-t-[#3498db] animate-spin"></div>
   );
 }
 

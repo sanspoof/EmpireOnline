@@ -1,6 +1,5 @@
-import React, { useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { ContentfulContext } from '../../context/ContentfulContext';
-import css from './ReviewSidebar.module.scss';
 import ReviewItem from './ReviewItem'; 
 import Loading from '../UI/LoadingSpinner/LoadingSpinner';
 import ErrorMessage from '../UI/ErrorMessage/ErrorMessage';
@@ -25,7 +24,7 @@ function ReviewSidebar() {
   if (!reviews || reviews.length === 0) return <EmptyState message="No reviews available." />;
 
   return (
-    <div className={css.reviewsidebar}>
+    <div className="grid gap-2 bg-amber-700 col-span-4">
       {reviews.map((review) => (
         <ReviewItem 
           key={review.id} 

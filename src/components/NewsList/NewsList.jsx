@@ -23,7 +23,7 @@ import { ContentfulContext } from './../../context/ContentfulContext';
 
     return (
       <>
-      <div className="grid gap-2 bg-yellow-600">
+      <div className="grid gap-2 bg-yellow-600 col-span-10">
 
         {news.map((newsItem) => (
           <NewsItem 
