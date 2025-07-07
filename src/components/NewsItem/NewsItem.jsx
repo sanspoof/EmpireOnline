@@ -14,7 +14,7 @@ function NewsItem({ data }) {
           <img className="object-cover h-64" src={image.fields.file.url} alt={title} />
         </figure>
         <p className="font-body text-white text-sm">{formattedDate}</p>
-        <p className="font-headings text-white">{title}</p>
+        <p className="font-headings text-white text-lg">{title}</p>
         
       </div>
     );

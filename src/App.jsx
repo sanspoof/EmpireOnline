@@ -7,6 +7,7 @@ import ReviewSidebar from './components/ReviewSidebar/ReviewSidebar';
 import { ContentfulProvider } from './context/ContentfulContext';
 import { DataProvider } from "./context/DataContext"; 
 import PageContent from './components/UI/PageContentLayout/PageContent';
+import Footer from './components/Footer/Footer';
 
 function HomePage() {
   return (
@@ -30,6 +31,7 @@ function MoviesPage() {``
 
 function App() {
   return (
+    <>
     <SiteContainer>
     <ContentfulProvider>
       <DataProvider>
@@ -43,6 +45,8 @@ function App() {
       </DataProvider>
     </ContentfulProvider>
     </SiteContainer>
+    <Footer />
+    </>
   );
 }
 
