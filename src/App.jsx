@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SiteContainer from './components/UI/SiteContainer/SiteContainer';
 import HeroHeader from './components/HeroHeader/HeroHeader';
 import MainNavigation from './components/MainNavigation/MainNavigation';
 import NewsList from './components/NewsList/NewsList';
@@ -19,7 +20,7 @@ function HomePage() {
   );
 }
 
-function MoviesPage() {
+function MoviesPage() {``
   return (
     <>
       <HeroHeader />
@@ -29,6 +30,7 @@ function MoviesPage() {
 
 function App() {
   return (
+    <SiteContainer>
     <ContentfulProvider>
       <DataProvider>
         <BrowserRouter>
@@ -40,6 +42,7 @@ function App() {
         </BrowserRouter>
       </DataProvider>
     </ContentfulProvider>
+    </SiteContainer>
   );
 }
 

@@ -1,5 +1,4 @@
 import { useContext, useEffect } from 'react';
-import styles from "./heroheader.module.scss";
 import MyButton from "../UI/Button/Button";
 import { ContentfulContext } from './../../context/ContentfulContext';
 import Loading from '../UI/LoadingSpinner/LoadingSpinner';
@@ -23,19 +22,19 @@ function HeroHeader() {
   const { mainTitle, mainSubtitle, mainCallToActionButtonText, mainBannerImage } = mainItem;
 
   return (
-    <div className={styles.heroheader}>
-      <div className={styles.heroheader__info}>
+    <div className="grid h-hero-height grid-cols-2 items-center">
+      <div className="grid justify-items-start gap-3">
         <div className="font-heroheader text-white text-5xl">{mainTitle}</div>
-        <span className={styles.heroheader__dash}></span>
+        <span className="block w-12 border-b border-white"></span>
         <div className="font-body text-white text-lg/relaxed">{mainSubtitle}</div>
         <MyButton text={mainCallToActionButtonText} />
       </div>
-      <div className={styles.heroheader__imgwrap}>
+      <div className="h-full relatives">
         {mainBannerImage && (
           <img
             src={mainBannerImage.fields.file.url}
             alt={mainTitle}
-            className={styles.heroheader__img}
+            className="w-full h-full object-cover heroimage-mask"
           />
         )}
       </div>

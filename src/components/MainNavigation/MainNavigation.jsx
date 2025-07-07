@@ -29,7 +29,7 @@ const elNav = useRef(null);
 
   return (
 
-    <nav className="flex justify-between items-center">
+    <nav className="flex justify-between items-center h-nav-height">
       <Link to="/">
         <h1 className="text-white uppercase font-empire-logo text-4xl tracking-tighter">Empire</h1>
       </Link>
