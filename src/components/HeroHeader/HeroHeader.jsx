@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react';
-import MyButton from "../UI/Button/Button";
+import Button from "../UI/Button/Button";
 import { ContentfulContext } from './../../context/ContentfulContext';
 import Loading from '../UI/LoadingSpinner/LoadingSpinner';
 
@@ -27,7 +27,7 @@ function HeroHeader() {
         <div className="font-heroheader text-white text-5xl">{mainTitle}</div>
         <span className="block w-12 border-b border-white"></span>
         <div className="font-body text-white text-lg/relaxed">{mainSubtitle}</div>
-        <MyButton text={mainCallToActionButtonText} />
+        <Button text={mainCallToActionButtonText} />
       </div>
       <div className="h-full relatives">
         {mainBannerImage && (

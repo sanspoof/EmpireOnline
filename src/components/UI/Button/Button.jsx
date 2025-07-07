@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function MyButton({text}) {
+function Button({text}) {
 
   const [likes, setLikes] = useState(0);
 
@@ -12,7 +12,7 @@ function MyButton({text}) {
     return (
       <button
       onClick={handleClick}
-      className="bg-brand text-white py-2 px-4 rounded"
+      className="bg-brand text-white py-2 px-4 rounded hover:cursor-pointer active:translate-y-px"
       type='button'
       >
         {text}
@@ -20,4 +20,4 @@ function MyButton({text}) {
     );
   }
 
-  export default MyButton;
+  export default Button;

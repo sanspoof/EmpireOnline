@@ -1,6 +1,6 @@
 function SiteContainer({ children }) {
     return (
-      <div className="bg-indigo-700">
+      <div className="bg-indigo-700 ml-auto mr-auto max-w-(--site-container-max-width) px-8">
         {children}
       </div>
     );

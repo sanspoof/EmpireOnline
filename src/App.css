@@ -18,6 +18,8 @@ font-display:auto;font-style:normal;font-weight:100 900;font-stretch:normal;
     --spacing-nav-height: 62px; /* h-nav-height*/
     --spacing-hero-height:640px;
 
+    --site-container-max-width:1800px;
+
     --MainNavigationHeight:var(--MainNavigationLogoHeight);
     --MainNavigationHeight--Scrolled:64px;
     --MainNavigationBorderColor:#B3B3B3;
