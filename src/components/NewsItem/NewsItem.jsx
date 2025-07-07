@@ -11,9 +11,10 @@ function NewsItem({ data }) {
     return (
       <div className="flex flex-col gap-2">
         <figure className="w-full h-64 overflow-hidden rounded-xl border-brand border-2">
-          <img className="object-cover h-64" src={image.fields.file.url} alt={title} />
+          <img className="object-cover min-h-full" src={image.fields.file.url} alt={title} />
         </figure>
         <p className="font-body text-white text-sm">{formattedDate}</p>
+        <span className="block w-6 border-b border-white"></span>
         <p className="font-headings text-white text-lg">{title}</p>
         
       </div>

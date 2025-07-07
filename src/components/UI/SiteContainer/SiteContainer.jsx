@@ -1,7 +1,7 @@
 function SiteContainer({ children }) {
     return (
     <div className="px-16">
-      <div className="bg-indigo-900 ml-auto mr-auto max-w-(--site-container-max-width) min-h-screen">
+      <div className=" ml-auto mr-auto max-w-(--site-container-max-width) min-h-screen border-l border-l-gray-500 border-r border-r-gray-500 ">
         {children}
       </div>
     </div>

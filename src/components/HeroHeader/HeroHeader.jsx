@@ -22,7 +22,7 @@ function HeroHeader() {
   const { mainTitle, mainSubtitle, mainCallToActionButtonText, mainBannerImage } = mainItem;
 
   return (
-    <div className="grid h-hero-height grid-cols-2 items-center relative px-6">
+    <div className="grid h-hero-height grid-cols-2 items-center relative px-6 border-b border-b-gray-500">
       <div className="grid justify-items-start gap-3 relative z-10">
         <div className="font-heroheader text-white text-5xl">{mainTitle}</div>
         <span className="block w-12 border-b border-white"></span>

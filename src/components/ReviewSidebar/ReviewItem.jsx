@@ -12,7 +12,7 @@ function ReviewItem({ data }) {
     <div className="flex items-center relative gap-4">
       <div className="flex flex-col gap-1 align-baseline">
           <h3 className="font-headings text-white ">{title}</h3>
-          <p className="text-sm text-white">{summary}</p> 
+          <p className="text-sm text-white font-medium">{summary}</p> 
           <div className="flex items-center justify-between">
               <RatingStars rating={reviewrating} /> 
             <a href="#" className="">

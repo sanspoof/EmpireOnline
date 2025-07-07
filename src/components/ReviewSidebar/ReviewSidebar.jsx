@@ -27,7 +27,7 @@ function ReviewSidebar() {
     <div className=" bg-brand col-span-4 p-6 mt-[-70px] z-[10] grid gap-6 content-start rounded-tl-3xl">
       <div className="flex items-center justify-between">
         <h3 className="font-headings text-white text-2xl">Latest Reviews</h3>
-        <span>toggle</span>
+        <span className="text-white text-sm font-bold">Show Rating</span>
       </div>
       <div className="grid gap-6 content-baseline">
         {reviews.map((review) => (

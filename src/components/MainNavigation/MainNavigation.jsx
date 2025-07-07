@@ -6,7 +6,7 @@ import vipIcon from "../../assets/icons/vip.svg"; // Assuming you have a VIP ico
 
 function MainNavigation() {
 
-const strNavClasses = "text-white font-headings flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-100 cursor-pointer";
+const strNavClasses = "text-white font-headings flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-white/20 active:bg-white/25 transition-colors duration-100 cursor-pointer";
 const strNavIconClass = "size-5.5 text-white";
 
 const elNav = useRef(null); 
@@ -29,12 +29,12 @@ const elNav = useRef(null);
 
   return (
 
-    <nav className="flex justify-between items-center h-nav-height w-full px-6">
+    <nav className="flex justify-between items-center h-nav-height w-full px-6 border-b border-b-gray-500">
       <Link to="/">
         <h1 className="text-white uppercase font-empire-logo text-4xl tracking-tighter">Empire</h1>
       </Link>
 
-      <div ref={elNav} className="flex">
+      <div ref={elNav} className="flex items-center">
         <Link to="/movies" className={strNavClasses}>
           <FilmIcon className={strNavIconClass} />
           <span>Movies</span>
