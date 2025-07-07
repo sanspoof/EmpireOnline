@@ -72,3 +72,9 @@ body {
         mask-composite: intersect;
 }
 
+.heroimage-radialmask {
+    -webkit-mask-image: radial-gradient(circle, rgb(0, 0, 0) 48%, rgba(0, 0, 0, 0) 100%), radial-gradient(circle, rgb(0, 0, 0) 69%, rgba(0, 0, 0, 0) 80%);
+    mask-image: radial-gradient(circle, rgb(0, 0, 0) 48%, rgba(0, 0, 0, 0) 100%), radial-gradient(circle, rgb(0, 0, 0) 69%, rgba(0, 0, 0, 0) 80%);
+    mask-composite: intersect;
+}
+

@@ -22,9 +22,9 @@ import { ContentfulContext } from './../../context/ContentfulContext';
 
 
     return (
-      <>
-      <div className="grid gap-2 bg-yellow-600 col-span-10">
-
+      <section className="grid col-span-10 gap-2 content-start py-6 pl-6">
+      <h3 className="font-bold self-auto text-white text-2xl font-headings">Latest Movie News</h3>
+      <div className="grid grid-cols-3 gap-6">
         {news.map((newsItem) => (
           <NewsItem 
           key={newsItem.id} 
@@ -33,7 +33,7 @@ import { ContentfulContext } from './../../context/ContentfulContext';
         ))}
         
       </div>
-      </>
+      </section>
     );
   }
   
