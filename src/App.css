@@ -72,6 +72,10 @@ body {
         mask-composite: intersect;
 }
 
+.review-drop-shadow {
+  box-shadow:-14px 14px 0px #ae1d1d63;
+}
+
 .heroimage-radialmask {
     -webkit-mask-image: radial-gradient(circle, 
   rgb(0, 0, 0) 40%, 
