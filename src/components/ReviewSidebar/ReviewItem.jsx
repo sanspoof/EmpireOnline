@@ -21,7 +21,7 @@ function ReviewItem({ data }) {
           </div>
       </div>
       <figure className="overflow-hidden rounded-xl w-[120px] h-[140px] shrink-0 translate-x-9 -ml-9">
-        <img className="object-cover h-full" src={heroImage.fields.file.url} alt={title} />
+        <img className="object-cover h-full pointer-events-none" src={heroImage.fields.file.url} alt={title} />
       </figure>
     </div>
   );

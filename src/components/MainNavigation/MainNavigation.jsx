@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { UserCircleIcon } from "@heroicons/react/24/solid";
-import { FilmIcon, TvIcon, CpuChipIcon, MusicalNoteIcon, ShoppingBagIcon, NewspaperIcon } from "@heroicons/react/24/outline";
-import vipIcon from "../../assets/icons/vip.svg"; // Assuming you have a VIP icon
+import { UserCircleIcon as UserCircleIconSolid, Cog8ToothIcon as Cog8ToothIconSolid } from "@heroicons/react/24/solid";
+import { FilmIcon, TvIcon, CpuChipIcon, MusicalNoteIcon, ShoppingBagIcon, NewspaperIcon, Cog8ToothIcon } from "@heroicons/react/24/outline";
+import vipIcon from "../../assets/icons/vip.svg"; 
 
 function MainNavigation() {
 
@@ -29,7 +29,8 @@ const elNav = useRef(null);
 
   return (
 
-    <nav className="flex justify-between items-center h-nav-height w-full px-6 border-b border-b-gray-500">
+    <nav className=" h-nav-height w-full border-b border-b-gray-500 absolute top-0 left-0 z-10 px-16">
+      <div className="flex justify-between items-center h-nav-height ml-auto mr-auto max-w-(--site-container-max-width) px-6">
       <Link to="/">
         <h1 className="text-white uppercase font-empire-logo text-4xl tracking-tighter">Empire</h1>
       </Link>
@@ -51,10 +52,10 @@ const elNav = useRef(null);
           <MusicalNoteIcon className={strNavIconClass} />
           <span>Podcasts</span>
         </div>
-        <div className={strNavClasses}>
+        {/* <div className={strNavClasses}>
           <ShoppingBagIcon className={strNavIconClass} />
           <span>Shopping</span>
-        </div>
+        </div> */}
         <div className={strNavClasses}>
           <NewspaperIcon className={strNavIconClass} />
           <span>Magazine</span>
@@ -65,10 +66,16 @@ const elNav = useRef(null);
         </div>
       </div>
 
-      <div>
-        <UserCircleIcon className="size-10.5 text-white" />
-      </div>
-
+        <div className="flex items-center gap-0.5">
+          <div className="relative group cursor-pointer" onClick={() => console.log("Settings clicked")}>
+            <Cog8ToothIcon className="size-6 text-white group-hover:opacity-0 transition-opacity duration-200" />
+            <Cog8ToothIconSolid className="size-6 text-white absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 group-active:active:translate-y-px" />
+          </div>
+          <div className="relative group cursor-pointer" onClick={() => console.log("User Profile clicked")}>
+            <UserCircleIconSolid className="size-10 text-white/90 group-hover:text-white/100 group-active:active:translate-y-px" />
+          </div>
+        </div>
+    </div>
     </nav>
   );
 }
