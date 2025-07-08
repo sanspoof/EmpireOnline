@@ -24,6 +24,7 @@ import { ContentfulContext } from './../../context/ContentfulContext';
     return (
       <section className="grid col-span-10 gap-2 content-start py-6 pl-6">
       <h3 className="font-bold self-auto text-white text-2xl font-headings">Latest Movie News</h3>
+      <span className="block w-12 border-b border-white mb-2"></span>
       <div className="grid grid-cols-3 gap-6">
         {news.map((newsItem) => (
           <NewsItem 

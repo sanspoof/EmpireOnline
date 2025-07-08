@@ -1,27 +1,34 @@
 import RatingStars from '../UI/RatingStars/RatingStars';
-import GoArrow from '../UI/GoArrow/GoArrow';
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
-function ReviewItem({ data }) {
+function ReviewItem({ data, showStars = true }) {
   const { created, title, subtitle, summary, reviewrating, heroImage } = data;
 
+  const funcTrimSummary = (text, maxLength) => {
 
+    if (!text) return '';
+
+    return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
+
+  };
   
 // Log the URL of the hero image
 
   return (
-    <div className="flex items-center relative gap-4">
+    <div className="flex items-center relative gap-4 group">
       <div className="flex flex-col gap-1 align-baseline">
           <h3 className="font-headings text-white ">{title}</h3>
-          <p className="text-sm text-white font-medium">{summary}</p> 
+          <p className="text-sm text-white font-medium">{funcTrimSummary(summary, 110)}</p> 
           <div className="flex items-center justify-between">
-              <RatingStars rating={reviewrating} /> 
-            <a href="#" className="">
-              <GoArrow />
+              {showStars && <RatingStars rating={reviewrating} /> }
+            <a href="#" className="flex items-center text-sm font-bold gap-1 text-white hover:underline">
+              <span>Read</span>
+              <ArrowRightIcon className="size-4 text-white" />
             </a>
           </div>
       </div>
       <figure className="overflow-hidden rounded-xl w-[120px] h-[140px] shrink-0 translate-x-9 -ml-9">
-        <img className="object-cover h-full pointer-events-none" src={heroImage.fields.file.url} alt={title} />
+        <img className="object-cover h-full pointer-events-none grayscale group-hover:grayscale-0" src={heroImage.fields.file.url} alt={title} />
       </figure>
     </div>
   );

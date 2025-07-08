@@ -33,7 +33,8 @@ function ReviewSidebar() {
         {reviews.map((review) => (
           <ReviewItem 
             key={review.id} 
-            data={review} 
+            data={review}
+            showStars={true} 
           />
         ))}
       </div>
