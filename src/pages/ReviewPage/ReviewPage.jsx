@@ -33,7 +33,7 @@ function ReviewPage() {
   return (
     <>
     <HeroHeader data={review} />
-    <article >
+    <article className='px-6 py-8' >
                 <span className="text-gray-400">
             {new Date(review.created).toLocaleDateString()}
           </span>

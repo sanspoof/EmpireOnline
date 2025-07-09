@@ -40,7 +40,8 @@ function App() {
           <MainNavigation />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/movies" element={<MoviesPage />}  />
+            <Route path="/movies" element={<HomePage />} />
+            {/* <Route path="/movies" element={<MoviesPage />}  /> */}
             <Route path="/review/:id" element={<ReviewPage />} />
           </Routes>
         </BrowserRouter>
