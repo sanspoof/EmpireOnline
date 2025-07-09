@@ -8,6 +8,7 @@ import { ContentfulProvider } from './context/ContentfulContext';
 import { DataProvider } from "./context/DataContext"; 
 import PageContent from './components/UI/PageContentLayout/PageContent';
 import Footer from './components/Footer/Footer';
+import ReviewPage from './pages/ReviewPage/ReviewPage';
 
 function HomePage() {
   return (
@@ -21,7 +22,7 @@ function HomePage() {
   );
 }
 
-function MoviesPage() {``
+function MoviesPage() {
   return (
     <>
       <HeroHeader />
@@ -40,6 +41,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/movies" element={<MoviesPage />}  />
+            <Route path="/review/:id" element={<ReviewPage />} />
           </Routes>
         </BrowserRouter>
       </DataProvider>

@@ -1,25 +1,50 @@
-import { useContext, useEffect } from 'react';
 import Button from "../UI/Button/Button";
-import { ContentfulContext } from './../../context/ContentfulContext';
 import Loading from '../UI/LoadingSpinner/LoadingSpinner';
+import { useHomepageBanner } from '../../hooks/Banner/useHomepageBanner';
+import RatingStars from '../UI/RatingStars/RatingStars';
 
-function HeroHeader() {
+function HeroHeader({ data = null }) {
 
-  const { content, fetchContent, loading } = useContext(ContentfulContext);
+  // If custom data is provided, use it instead of the banner that is set in contentful
+  if (data) {
+    const { title, subtitle, heroImage, reviewrating } = data;
+    
+    return (
+      <div className="grid h-hero-height grid-cols-2 items-center relative px-6 border-b border-b-gray-500">
+        <div className="grid justify-items-start gap-3 relative z-10">
+          <div className="font-heroheader text-white text-6xl">{title}</div>
+          <span className="block w-12 border-b border-white"></span>
+          <div className="font-body text-white text-xl/relaxed">{subtitle}</div>
+          {reviewrating && (
+            <div className="flex items-center gap-2">
+              <RatingStars size="10" rating={reviewrating} />
+              <span className="text-white">Rating: {reviewrating}/5</span>
+            </div>
+          )}
+        </div>
+        <div className="h-full absolute inset-0 z-0">
+          {heroImage && (
+            <img
+              src={heroImage.fields.file.url}
+              alt={title}
+              className="w-full h-full object-cover heroimage-radialmask"
+            />
+          )}
+        </div>
+      </div>
+    );
+  }
 
-  useEffect(() => {
-    fetchContent('homepageBanner');
-  }, [fetchContent]);
+  const { mainBanner, loading, error } = useHomepageBanner();
 
-  const banners = content['homepageBanner']; // Expecting an array
+  // Default homepage banner behavior
+  if (loading) return <Loading />;
+  if (error) return <div className="text-red-500">Error:</div>;
+  if (!mainBanner) return <div className="text-white">No banner data available</div>;
 
-  if (loading['homepageBanner']) return <Loading/>;
-  if (!banners || banners.length === 0) return <div>No data available</div>;
+  const { mainTitle, mainSubtitle, mainCallToActionButtonText, mainBannerImage } = mainBanner;
 
-  // show as main set in contentful
-  const mainItem = banners.find(item => item.showAsMain === true);
-
-  const { mainTitle, mainSubtitle, mainCallToActionButtonText, mainBannerImage } = mainItem;
+  //console.log(mainBanner)
 
   return (
     <div className="grid h-hero-height grid-cols-2 items-center relative px-6 border-b border-b-gray-500">
