@@ -7,8 +7,10 @@ function HeroHeader({ data = null }) {
 
   // If custom data is provided, use it instead of the banner that is set in contentful
   if (data) {
-    const { title, subtitle, heroImage, reviewrating } = data;
+    const { title, subtitle, heroImage, image, reviewrating } = data;
     
+    console.log('HeroHeader Data:', data);
+
     return (
       <div className="grid h-hero-height grid-cols-2 items-center relative px-6 border-b border-b-gray-500">
         <div className="grid justify-items-start gap-3 relative z-10">
@@ -23,9 +25,9 @@ function HeroHeader({ data = null }) {
           )}
         </div>
         <div className="h-full absolute inset-0 z-0">
-          {heroImage && (
+          {(heroImage || image) && (
             <img
-              src={heroImage.fields.file.url}
+              src={(heroImage || image).fields.file.url}
               alt={title}
               className="w-full h-full object-cover heroimage-radialmask"
             />

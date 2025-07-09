@@ -9,6 +9,7 @@ import { DataProvider } from "./context/DataContext";
 import PageContent from './components/UI/PageContentLayout/PageContent';
 import Footer from './components/Footer/Footer';
 import ReviewPage from './pages/ReviewPage/ReviewPage';
+import NewsPage from './pages/NewsPage/NewsPage';
 
 function HomePage() {
   return (
@@ -22,13 +23,6 @@ function HomePage() {
   );
 }
 
-function MoviesPage() {
-  return (
-    <>
-      <HeroHeader />
-    </>
-  );
-}
 
 function App() {
   return (
@@ -43,6 +37,7 @@ function App() {
             <Route path="/movies" element={<HomePage />} />
             {/* <Route path="/movies" element={<MoviesPage />}  /> */}
             <Route path="/review/:id" element={<ReviewPage />} />
+            <Route path="/news/:id" element={<NewsPage />} />
           </Routes>
         </BrowserRouter>
       </DataProvider>
