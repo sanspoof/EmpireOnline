@@ -18,7 +18,7 @@ function NewsItem({ data }) {
         </figure>
         <p className="font-body text-white text-sm">{formattedDate}</p>
         <span className="block w-6 border-b border-white"></span>
-        <p className="font-headings text-white text-lg group-hover:underline">{title}</p>
+        <p className="font-headings text-white text-lg group-hover:underline underline-offset-4">{title}</p>
         
       </div>
       </Link>

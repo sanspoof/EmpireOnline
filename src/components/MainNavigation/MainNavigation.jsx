@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserCircleIcon as UserCircleIconSolid, Cog8ToothIcon as Cog8ToothIconSolid } from "@heroicons/react/24/solid";
-import { FilmIcon, TvIcon, CpuChipIcon, MusicalNoteIcon, ShoppingBagIcon, NewspaperIcon, Cog8ToothIcon, Bars2Icon } from "@heroicons/react/24/outline";
+import { FilmIcon, TvIcon, CpuChipIcon, MusicalNoteIcon, ShoppingBagIcon, NewspaperIcon, Cog8ToothIcon, Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../UI/Logo/Logo";
 import vipIcon from "../../assets/icons/vip.svg"; 
 
@@ -78,7 +78,11 @@ const elNav = useRef(null);
     </div>
 
     <div className={`w-full h-full fixed top-0 left-0 flex bg-black z-30 align-items-center justify-center text-white p-16 ${isMobileMenuOpen ? 'flex' : 'hidden'}`}>
-          <button className="absolute top-4 right-4 text-white font-bold text-2xl hover:text-gray-300" onClick={closeMobileMenu}>Close</button>
+          <button className="flex items-center absolute top-4 right-4 text-white font-bold text-base hover:text-gray-300" onClick={closeMobileMenu}>
+            
+            <XMarkIcon className="size-5 text-white" />
+            <span>Close</span>
+            </button>
           <div className="flex flex-col items-baseline justify-center gap-4 w-full">
               <Link to="/movies" className="text-white font-headings text-6xl" onClick={closeMobileMenu}>Movies</Link>
               <Link to="/" className="text-white font-headings text-6xl" onClick={closeMobileMenu}>TV</Link>

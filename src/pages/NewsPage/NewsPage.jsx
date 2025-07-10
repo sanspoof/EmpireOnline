@@ -48,7 +48,7 @@ function NewsPage() {
 
       
       
-      <div className="prose prose-invert max-w-none">
+      <div className="">
         
         
         {/* Display the rich text content from newsbody */}
