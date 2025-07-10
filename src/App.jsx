@@ -22,13 +22,6 @@ function HomePage() {
   );
 }
 
-function MoviesPage() {
-  return (
-    <>
-      <HeroHeader />
-    </>
-  );
-}
 
 function App() {
   return (

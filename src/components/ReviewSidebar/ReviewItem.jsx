@@ -13,11 +13,20 @@ function ReviewItem({ data, showStars = true }) {
 
   };
 
+  
+  function funcRemoveReviewWord(str) {
+
+    let strs = str.replace(/Review/g, ''); 
+
+    return strs;
+
+  }
+
   return (
     
     <div className="flex items-center relative gap-4 group">
       <div className="flex flex-col gap-1 align-baseline">
-          <h3 className="font-headings text-white ">{title}</h3>
+          <h3 className="font-headings text-white ">{funcRemoveReviewWord(title)}</h3>
           <p className="text-sm text-white font-medium">{funcTrimSummary(summary, 110)}</p> 
           <div className="flex items-center justify-between">
               {showStars && <RatingStars rating={reviewrating} /> }

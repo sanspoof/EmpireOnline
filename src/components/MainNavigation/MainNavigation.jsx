@@ -1,42 +1,40 @@
-import { useEffect, useRef } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserCircleIcon as UserCircleIconSolid, Cog8ToothIcon as Cog8ToothIconSolid } from "@heroicons/react/24/solid";
-import { FilmIcon, TvIcon, CpuChipIcon, MusicalNoteIcon, ShoppingBagIcon, NewspaperIcon, Cog8ToothIcon } from "@heroicons/react/24/outline";
+import { FilmIcon, TvIcon, CpuChipIcon, MusicalNoteIcon, ShoppingBagIcon, NewspaperIcon, Cog8ToothIcon, Bars2Icon } from "@heroicons/react/24/outline";
 import Logo from "../UI/Logo/Logo";
 import vipIcon from "../../assets/icons/vip.svg"; 
 
 function MainNavigation() {
 
-const strNavClasses = "text-white font-headings flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-white/20 active:bg-white/25 transition-colors duration-100 cursor-pointer";
+const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+const strNavClasses = "text-white font-headings flex items-center gap-1.5 px-2 py-2 rounded-lg hover:bg-white/15 active:bg-white/25 transition-colors duration-100 cursor-pointer";
 const strNavIconClass = "size-5.5";
 
 const elNav = useRef(null); 
 
-  useEffect(() => {
+  function openMobileMenu() {
 
-      const handleScroll = () => {
+    setIsMobileMenuOpen(true);
 
+  }
 
+  function closeMobileMenu() {
 
-      };
+    setIsMobileMenuOpen(false);
 
-    document.addEventListener("scroll", handleScroll);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      document.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  }
 
   return (
 
-    <nav className=" h-nav-height w-full border-b border-b-gray-500 absolute top-0 left-0 z-10 px-16">
+    <nav className=" h-nav-height w-full border-b border-b-gray-500 absolute top-0 left-0 z-100 px-16">
       <div className="flex justify-between items-center h-nav-height ml-auto mr-auto max-w-(--site-container-max-width) px-6">
       <Link to="/">
         <Logo />
       </Link>
 
-      <div ref={elNav} className="flex items-center">
+      <div ref={elNav} className="items-center hidden lg:flex">
         <Link to="/movies" className={strNavClasses}>
           <FilmIcon className={strNavIconClass} />
           <span>Movies</span>
@@ -66,14 +64,34 @@ const elNav = useRef(null);
           <span>VIP</span>
         </div>
       </div>
+      <div className={strNavClasses + " lg:hidden"} onClick={openMobileMenu}>
+        <Bars2Icon className={strNavIconClass} />
+        <span>Menu</span>
+      </div>
 
-        <div className="flex items-center gap-0.5">
+        <div className="items-center gap-0.5 hidden lg:flex">
           <div className="relative group cursor-pointer" onClick={() => console.log("Settings clicked")}>
             <Cog8ToothIcon className="size-7 text-white group-hover:opacity-0 transition-opacity duration-200" />
             <Cog8ToothIconSolid className="size-7 text-white absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 group-active:active:translate-y-px" />
           </div>
         </div>
     </div>
+
+    <div className={`w-full h-full fixed top-0 left-0 flex bg-black z-30 align-items-center justify-center text-white p-16 ${isMobileMenuOpen ? 'flex' : 'hidden'}`}>
+          <button className="absolute top-4 right-4 text-white font-bold text-2xl hover:text-gray-300" onClick={closeMobileMenu}>Close</button>
+          <div className="flex flex-col items-baseline justify-center gap-4 w-full">
+              <Link to="/movies" className="text-white font-headings text-6xl" onClick={closeMobileMenu}>Movies</Link>
+              <Link to="/" className="text-white font-headings text-6xl" onClick={closeMobileMenu}>TV</Link>
+              <Link to="/" className="text-white font-headings text-6xl" onClick={closeMobileMenu}>Gaming</Link>
+              <Link to="/" className="text-white font-headings text-6xl" onClick={closeMobileMenu}>Podcasts</Link>
+              <Link to="/" className="text-white font-headings text-6xl" onClick={closeMobileMenu}>Magazine</Link>
+              <Link to="/" className="text-white font-headings text-6xl" onClick={closeMobileMenu}>VIP</Link>
+              <span className="block w-12 border-b border-white"></span>
+              <Link to="/" className="text-white font-headings text-3xl" onClick={closeMobileMenu}>Settings</Link>
+          </div>
+    </div>
+
+
     </nav>
   );
 }
