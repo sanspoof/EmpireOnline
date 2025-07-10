@@ -2,7 +2,7 @@
 
 function Loading() {
   return (
-    <div className="size-10 rounded-full border-4 border-white border-t-[#3498db] animate-spin"></div>
+    <div className="size-10 rounded-full border-1 border-white border-t-brand animate-spin"></div>
   );
 }
 

@@ -18,11 +18,15 @@ const elNav = useRef(null);
 
     setIsMobileMenuOpen(true);
 
+    document.body.style.overflow = "hidden"; 
+
   }
 
   function closeMobileMenu() {
 
     setIsMobileMenuOpen(false);
+
+    document.body.style.overflow = "auto";
 
   }
 
