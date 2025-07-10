@@ -24,12 +24,12 @@ function ReviewSidebar() {
   if (!reviews || reviews.length === 0) return <EmptyState message="No reviews available." />;
 
   return (
-    <div className=" bg-brand col-span-4 mt-[-70px] z-[10] grid content-start rounded-tl-3xl rounded-bl-sm translate-x-[1px] review-drop-shadow border border-white/25 max-w-md justify-self-end">
-      <div className="flex items-center justify-between px-6 pt-6 pb-3 border-b border-white/25">
-        <h3 className="font-headings text-white text-2xl">Latest Reviews</h3>
+    <div className=" xl:bg-brand col-span-full md:col-span-6 lg:col-span-4 xl:mt-[-70px] z-[10] grid content-start xl:rounded-tl-3xl rounded-bl-sm translate-x-[1px] xl:review-drop-shadow border-l xl:border border-white/25 md:max-w-md justify-self-end">
+      <div className="flex items-center justify-between px-6 pt-4 xl:pt-6 pb-3 border-b border-white/25">
+        <h3 className="font-headings text-white text-xl xl:text-2xl">Latest Reviews</h3>
         <span className="text-white text-sm font-bold">Show Rating</span>
       </div>
-      <div className="grid gap-6 content-baseline px-6 pb-6 pt-3">
+      <div className="grid gap-6 content-baseline px-6 xl:pl-6 xl:pr-2 pb-6 pt-3">
         {reviews.map((review) => (
           <ReviewItem 
             key={review.id} 

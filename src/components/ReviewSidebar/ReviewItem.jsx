@@ -24,7 +24,7 @@ function ReviewItem({ data, showStars = true }) {
 
   return (
     
-    <div className="flex items-center relative gap-4 group">
+    <div className="flex flex-col xl:flex-row items-center relative gap-4 group">
       <div className="flex flex-col gap-1 align-baseline">
           <h3 className="font-headings text-white ">{funcRemoveReviewWord(title)}</h3>
           <p className="text-sm text-white font-medium">{funcTrimSummary(summary, 110)}</p> 
@@ -36,8 +36,8 @@ function ReviewItem({ data, showStars = true }) {
             </Link>
           </div>
       </div>
-      <figure className="overflow-hidden rounded-xl w-[120px] h-[140px] shrink-0 translate-x-9 -ml-9">
-        <img className="object-cover h-full pointer-events-none grayscale group-hover:grayscale-0" src={heroImage.fields.file.url} alt={title} />
+      <figure className="-order-1 xl:order-2 xl:block overflow-hidden rounded-xl w-full xl:w-28 h-36 xl:h-32 shrink-0 xl:translate-x-9 xl:-ml-9">
+        <img className="object-cover h-full w-full pointer-events-none grayscale group-hover:grayscale-0" src={heroImage.fields.file.url} alt={title} />
       </figure>
     </div>
    

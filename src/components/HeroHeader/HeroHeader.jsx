@@ -49,11 +49,11 @@ function HeroHeader({ data = null }) {
   //console.log(mainBanner)
 
   return (
-    <div className="grid h-hero-height grid-cols-2 items-center relative px-6 border-b border-b-gray-500">
+    <div className="grid h-hero-height lg:grid-cols-2 items-center relative px-6 border-b border-b-gray-500">
       <div className="grid justify-items-start gap-3 relative z-10">
-        <div className="font-heroheader text-white text-6xl">{mainTitle}</div>
+        <div className="font-heroheader text-white text-4xl lg:text-6xl">{mainTitle}</div>
         <span className="block w-12 border-b border-white"></span>
-        <div className="font-body text-white text-xl/relaxed">{mainSubtitle}</div>
+        <div className="font-body text-white text-lg lg:text-xl/relaxed">{mainSubtitle}</div>
         <Button text={mainCallToActionButtonText} />
       </div>
       <div className="h-full absolute inset-0 z-0">

@@ -28,7 +28,7 @@ const elNav = useRef(null);
 
   return (
 
-    <nav className=" h-nav-height w-full border-b border-b-gray-500 absolute top-0 left-0 z-100 px-16">
+    <nav className=" h-nav-height w-full border-b border-b-gray-500 absolute top-0 left-0 z-100 px-6 m:px-10 lg:px-16">
       <div className="flex justify-between items-center h-nav-height ml-auto mr-auto max-w-(--site-container-max-width) px-6">
       <Link to="/">
         <Logo />
