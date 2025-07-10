@@ -10,6 +10,7 @@ import PageContent from './components/UI/PageContentLayout/PageContent';
 import Footer from './components/Footer/Footer';
 import ReviewPage from './pages/ReviewPage/ReviewPage';
 import NewsPage from './pages/NewsPage/NewsPage';
+import ScrollToTop from './components/Utils/ScrollToTop';
 
 function HomePage() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <DataProvider>
         <BrowserRouter>
           <MainNavigation />
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/movies" element={<HomePage />} />

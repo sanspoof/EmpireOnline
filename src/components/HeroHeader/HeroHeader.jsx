@@ -12,11 +12,11 @@ function HeroHeader({ data = null }) {
     console.log('HeroHeader Data:', data);
 
     return (
-      <div className="grid h-hero-height grid-cols-2 items-center relative px-6 border-b border-b-gray-500">
+      <div className="grid h-hero-height lg:grid-cols-2 items-center relative px-6 border-b border-b-gray-500">
         <div className="grid justify-items-start gap-3 relative z-10">
-          <div className="font-heroheader text-white text-6xl">{title}</div>
+          <div className="font-heroheader text-white text-4xl lg:text-6xl">{title}</div>
           <span className="block w-12 border-b border-white"></span>
-          <div className="font-body text-white text-xl/relaxed">{subtitle}</div>
+          <div className="font-body text-white text-lg lg:text-xl/relaxed">{subtitle}</div>
           {reviewrating && (
             <div className="flex items-center gap-2">
               <RatingStars size="10" rating={reviewrating} />
