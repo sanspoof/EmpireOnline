@@ -36,7 +36,7 @@ function ReviewItem({ data, showStars = true }) {
             </Link>
           </div>
       </div>
-      <figure className="-order-1 xl:order-2 xl:block overflow-hidden rounded-xl w-full xl:w-28 h-36 xl:h-32 shrink-0 xl:translate-x-9 xl:-ml-9">
+      <figure className="-order-1 xl:order-2 xl:block overflow-hidden rounded-xl w-full xl:w-28 h-48 md:h-36 xl:h-32 shrink-0 xl:translate-x-9 xl:-ml-9 border-white/28 border-1 xl:border-0">
         <img className="object-cover h-full w-full pointer-events-none grayscale group-hover:grayscale-0" src={heroImage.fields.file.url} alt={title} />
       </figure>
     </div>

@@ -24,8 +24,8 @@ function ReviewSidebar() {
   if (!reviews || reviews.length === 0) return <EmptyState message="No reviews available." />;
 
   return (
-    <div className=" xl:bg-brand col-span-full md:col-span-6 lg:col-span-4 xl:mt-[-70px] z-[10] grid content-start xl:rounded-tl-3xl rounded-bl-sm translate-x-[1px] xl:review-drop-shadow border-l xl:border border-white/25 md:max-w-md justify-self-end">
-      <div className="flex items-center justify-between px-6 pt-4 xl:pt-6 pb-3 border-b border-white/25">
+    <div className=" xl:bg-brand col-span-full md:col-span-6 lg:col-span-4 xl:mt-[-70px] z-[10] grid content-start xl:rounded-tl-3xl rounded-bl-sm translate-x-[1px] xl:shadow-reviewsidebar border-l xl:border border-brand/50 xl:border-white/25 md:max-w-md justify-self-end">
+      <div className="flex items-center justify-between px-6 pt-4 xl:pt-6 pb-3 border-b border-brand/50 xl:border-white/25">
         <h3 className="font-headings text-white text-xl xl:text-2xl">Latest Reviews</h3>
         <span className="text-white text-sm font-bold">Show Rating</span>
       </div>

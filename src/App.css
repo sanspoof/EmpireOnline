@@ -12,6 +12,7 @@ font-display:auto;font-style:normal;font-weight:100 900;font-stretch:normal;
 
 @theme {
       --color-brand:#AE1D1D;
+      --color-brand-50:#ae1d1d5e;
 
     --appFont:"roc-grotesk-variable",sans-serif; 
 
@@ -38,6 +39,8 @@ font-display:auto;font-style:normal;font-weight:100 900;font-stretch:normal;
     --col-gray-alpha:rgba(255 255 255 / 14%);
 
     --pageSidePadding:32px;
+
+    --shadow-reviewsidebar:-14px 14px 0px #ae1d1d63;
 
 }
 

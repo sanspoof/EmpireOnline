@@ -13,7 +13,7 @@ function NewsItem({ data }) {
     return (
       <Link to={`/news/${id}`}>
       <div className="flex flex-col gap-2 group hover:cursor-pointer">
-        <figure className="w-full h-40 lg:h-48 xl:h-64 overflow-hidden rounded-xl border-white/28 border-1">
+        <figure className="w-full h-48 md:h-40 lg:h-48 xl:h-64 overflow-hidden rounded-xl border-white/28 border-1">
           <img className="object-cover min-h-full" src={image.fields.file.url} alt={title} />
         </figure>
         <p className="font-body text-white text-sm">{formattedDate}</p>
