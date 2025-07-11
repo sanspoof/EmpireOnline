@@ -44,13 +44,33 @@ font-display:auto;font-style:normal;font-weight:100 900;font-stretch:normal;
 
 }
 
+@layer components {
+
+
+  .body-padding {
+    @apply px-4 md:px-10 lg:px-16;
+  }
+
+  .heading-primary {
+      @apply text-white text-xl lg:text-2xl;
+      font-variation-settings: 'wdth' 100, 'wght' 700;
+  }
+
+  .empire-logo {
+    @apply text-2xl lg:text-4xl tracking-tighter text-white uppercase;
+    font-variation-settings: 'wdth' 150, 'wght' 500;
+  }
+
+  .font-body {
+    
+    font-variation-settings: 'wdth' 100, 'wght' 500;
+  }
+
+}
+
 body {
       background-color: var(--col-pageBackground);
       font-family: var(--appFont);
-}
-
-.font-empire-logo {
-  font-variation-settings: 'wdth' 150, 'wght' 498;
 }
 
 .font-headings {
@@ -62,7 +82,7 @@ body {
 }
 
 .font-body {
-  font-variation-settings: 'wdth' 100, 'wght' 500;
+  
 }
 
 .heroimage-mask {        

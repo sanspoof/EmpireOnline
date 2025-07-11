@@ -16,9 +16,9 @@ function NewsItem({ data }) {
         <figure className="w-full h-48 md:h-40 lg:h-48 xl:h-64 overflow-hidden rounded-xl border-white/28 border-1">
           <img className="object-cover min-h-full" src={image.fields.file.url} alt={title} />
         </figure>
-        <p className="font-body text-white text-sm">{formattedDate}</p>
+        <p className="text-white text-sm">{formattedDate}</p>
         <span className="block w-6 border-b border-white"></span>
-        <p className="font-headings text-white text-lg group-hover:underline underline-offset-4">{title}</p>
+        <p className="heading-primary text-white text-lg group-hover:underline underline-offset-4">{title}</p>
         
       </div>
       </Link>

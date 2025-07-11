@@ -13,7 +13,7 @@ function HeroHeader({ data = null }) {
     console.log('HeroHeader Data:', data);
 
     return (
-      <div className="grid pt-34 pb-30 lg:pt-[initial] lg:pb-[initial] lg:h-hero-height lg:grid-cols-2 items-center relative px-6 border-b border-b-gray-500">
+      <div className="grid pt-40 pb-30 lg:pt-[initial] lg:pb-[initial] lg:h-hero-height lg:grid-cols-2 items-center relative px-6 border-b border-b-gray-500">
         <div className="grid justify-items-center md:justify-items-start gap-3 relative z-10">
           {reviewrating && (
             <div className="flex flex-col gap-2">
@@ -57,7 +57,7 @@ function HeroHeader({ data = null }) {
   //console.log(mainBanner)
 
   return (
-    <div className="grid pt-34 pb-30 lg:pt-[initial] lg:pb-[initial] lg:h-hero-height lg:grid-cols-2 items-center relative px-6 border-b border-b-gray-500">
+    <div className="grid pt-48 pb-30 lg:pt-[initial] lg:pb-[initial] lg:h-hero-height lg:grid-cols-2 items-center relative px-6 border-b border-b-gray-500">
       <div className="grid justify-items-center md:justify-items-start gap-3 relative z-10">
         <div className="font-heroheader text-white text-center md:text-left text-2xl md:text-4xl lg:text-6xl">{mainTitle}</div>
         <span className="block w-12 border-b border-white"></span>
