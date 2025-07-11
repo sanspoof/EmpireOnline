@@ -1,7 +1,16 @@
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { UserCircleIcon as UserCircleIconSolid, Cog8ToothIcon as Cog8ToothIconSolid } from "@heroicons/react/24/solid";
-import { FilmIcon, TvIcon, CpuChipIcon, MusicalNoteIcon, ShoppingBagIcon, NewspaperIcon, Cog8ToothIcon, Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { 
+  UserCircleIcon as UserCircleIconSolid, 
+  Cog8ToothIcon as Cog8ToothIconSolid,
+  FilmIcon as FilmIconSolid,
+  TvIcon as TvIconSolid,
+  CpuChipIcon as CpuChipIconSolid,
+  MusicalNoteIcon as MusicalNoteIconSolid,
+  NewspaperIcon as NewspaperIconSolid,
+  TrophyIcon as TrophyIconSolid
+} from "@heroicons/react/24/solid";
+import { FilmIcon, TvIcon, CpuChipIcon, MusicalNoteIcon, ShoppingBagIcon, NewspaperIcon, Cog8ToothIcon, Bars2Icon, XMarkIcon, TrophyIcon } from "@heroicons/react/24/outline";
 import Logo from "../UI/Logo/Logo";
 import vipIcon from "../../assets/icons/vip.svg"; 
 
@@ -9,8 +18,12 @@ function MainNavigation() {
 
 const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-const strNavClasses = "text-white font-headings flex items-center gap-1.5 px-2 py-2 rounded-lg hover:bg-white/15 active:bg-white/25 transition-colors duration-100 cursor-pointer";
-const strNavIconClass = "size-5.5";
+const strNavClasses = "group text-white font-headings flex items-center gap-1.5 px-2 py-2 rounded-lg hover:bg-white/15 active:bg-white/25 transition-colors duration-100 cursor-pointer transition-opacity duration-200";
+
+const strNavIconClass = "size-5.5 group-hover:opacity-0 transition-opacity duration-200";
+const strNavSolidIconClass = "size-5.5 text-white group-hover:opacity-100 absolute opacity-0 transition-opacity duration-200"
+
+const strNavMobileLinkClass = "text-white font-headings text-6xl";
 
 const elNav = useRef(null); 
 
@@ -40,19 +53,31 @@ const elNav = useRef(null);
 
       <div ref={elNav} className="items-center hidden lg:flex">
         <Link to="/movies" className={strNavClasses}>
-          <FilmIcon className={strNavIconClass} />
+          <div className="relative">
+            <FilmIconSolid className={strNavSolidIconClass} />
+            <FilmIcon className={strNavIconClass} />
+          </div>
           <span>Movies</span>
         </Link>
         <div className={strNavClasses}>
-          <TvIcon className={strNavIconClass} />
+          <div className="relative">
+            <TvIconSolid className={strNavSolidIconClass} />
+            <TvIcon className={strNavIconClass} />
+          </div>
           <span>TV</span>
         </div>
         <div className={strNavClasses}>
-          <CpuChipIcon className={strNavIconClass} />
+          <div className="relative">
+            <CpuChipIconSolid className={strNavSolidIconClass} />
+            <CpuChipIcon className={strNavIconClass} />
+          </div>
           <span>Gaming</span>
         </div>
         <div className={strNavClasses}>
-          <MusicalNoteIcon className={strNavIconClass} />
+          <div className="relative">
+            <MusicalNoteIconSolid className={strNavSolidIconClass} />
+            <MusicalNoteIcon className={strNavIconClass} />
+          </div>
           <span>Podcasts</span>
         </div>
         {/* <div className={strNavClasses}>
@@ -60,11 +85,17 @@ const elNav = useRef(null);
           <span>Shopping</span>
         </div> */}
         <div className={strNavClasses}>
-          <NewspaperIcon className={strNavIconClass} />
+          <div className="relative">
+            <NewspaperIconSolid className={strNavSolidIconClass} />
+            <NewspaperIcon className={strNavIconClass} />
+          </div>
           <span>Magazine</span>
         </div>
         <div className={strNavClasses}>
-          <img src={vipIcon} alt="VIP Icon" className={strNavIconClass} />
+          <div className="relative">
+            <TrophyIconSolid className={strNavSolidIconClass} />
+            <TrophyIcon className={strNavIconClass} />
+          </div>
           <span>VIP</span>
         </div>
       </div>
@@ -88,12 +119,12 @@ const elNav = useRef(null);
             <span>Close</span>
             </button>
           <div className="flex flex-col items-baseline justify-center gap-4 w-full">
-              <Link to="/movies" className="text-white font-headings text-6xl" onClick={closeMobileMenu}>Movies</Link>
-              <Link to="/" className="text-white font-headings text-6xl" onClick={closeMobileMenu}>TV</Link>
-              <Link to="/" className="text-white font-headings text-6xl" onClick={closeMobileMenu}>Gaming</Link>
-              <Link to="/" className="text-white font-headings text-6xl" onClick={closeMobileMenu}>Podcasts</Link>
-              <Link to="/" className="text-white font-headings text-6xl" onClick={closeMobileMenu}>Magazine</Link>
-              <Link to="/" className="text-white font-headings text-6xl" onClick={closeMobileMenu}>VIP</Link>
+              <Link to="/movies" className={strNavMobileLinkClass} onClick={closeMobileMenu}>Movies</Link>
+              <Link to="/" className={strNavMobileLinkClass} onClick={closeMobileMenu}>TV</Link>
+              <Link to="/" className={strNavMobileLinkClass} onClick={closeMobileMenu}>Gaming</Link>
+              <Link to="/" className={strNavMobileLinkClass} onClick={closeMobileMenu}>Podcasts</Link>
+              <Link to="/" className={strNavMobileLinkClass} onClick={closeMobileMenu}>Magazine</Link>
+              <Link to="/" className={strNavMobileLinkClass} onClick={closeMobileMenu}>VIP</Link>
               <span className="block w-12 border-b border-white"></span>
               <Link to="/" className="text-white font-headings text-3xl" onClick={closeMobileMenu}>Settings</Link>
           </div>

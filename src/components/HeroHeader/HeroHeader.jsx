@@ -41,8 +41,14 @@ function HeroHeader({ data = null }) {
 
   const { mainBanner, loading, error } = useHomepageBanner();
 
+
   // Default homepage banner behavior
-  if (loading) return <Loading />;
+  if (loading) return (
+  <div className="h-36 lg:h-hero-height flex items-center justify-center"> 
+    <Loading />
+  </div>
+);
+
   if (error) return <div className="text-red-500">Error:</div>;
   if (!mainBanner) return <div className="text-white">No banner data available</div>;
 
@@ -69,6 +75,7 @@ function HeroHeader({ data = null }) {
       </div>
     </div>
   );
+
 }
 
 export default HeroHeader;
