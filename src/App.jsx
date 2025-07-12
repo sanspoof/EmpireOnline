@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SiteContainer from './components/UI/SiteContainer/SiteContainer';
 import HeroHeader from './components/HeroHeader/HeroHeader';
@@ -11,6 +12,7 @@ import Footer from './components/Footer/Footer';
 import ReviewPage from './pages/ReviewPage/ReviewPage';
 import NewsPage from './pages/NewsPage/NewsPage';
 import ScrollToTop from './components/Utils/ScrollToTop';
+import SettingsContainer from './components/UI/SettingsContainer/SettingsContainer';
 
 function HomePage() {
   return (
@@ -26,13 +28,18 @@ function HomePage() {
 
 
 function App() {
+
+  const [showSettings, setShowSettings] = useState(false);
+
+  console.log('showSettings:', showSettings);
+
   return (
     <>
     <SiteContainer>
     <ContentfulProvider>
       <DataProvider>
         <BrowserRouter>
-          <MainNavigation />
+          <MainNavigation onSettingsClick={() => setShowSettings(true)} />
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -44,6 +51,7 @@ function App() {
         </BrowserRouter>
       </DataProvider>
     </ContentfulProvider>
+      <SettingsContainer showSettings={showSettings} onClose={() => setShowSettings(false)} />
     </SiteContainer>
     <Footer />
     </>

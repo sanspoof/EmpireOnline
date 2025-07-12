@@ -14,7 +14,7 @@ import { FilmIcon, TvIcon, CpuChipIcon, MusicalNoteIcon, ShoppingBagIcon, Newspa
 import Logo from "../UI/Logo/Logo";
 import vipIcon from "../../assets/icons/vip.svg"; 
 
-function MainNavigation() {
+function MainNavigation({ onSettingsClick }) {
 
 const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -105,7 +105,7 @@ const elNav = useRef(null);
       </div>
 
         <div className="items-center gap-0.5 hidden lg:flex">
-          <div className="relative group cursor-pointer" onClick={() => console.log("Settings clicked")}>
+          <div className="relative group cursor-pointer" onClick={onSettingsClick}>
             <Cog8ToothIcon className="size-7 text-white group-hover:opacity-0 transition-opacity duration-200" />
             <Cog8ToothIconSolid className="size-7 text-white absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 group-active:active:translate-y-px" />
           </div>
