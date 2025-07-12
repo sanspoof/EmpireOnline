@@ -62,7 +62,7 @@ font-display:auto;font-style:normal;font-weight:100 900;font-stretch:normal;
   }
 
   .font-body {
-    
+    @apply text-gray-200 text-base xl:text-lg ;
     font-variation-settings: 'wdth' 100, 'wght' 500;
   }
 

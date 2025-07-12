@@ -23,7 +23,7 @@ const strNavClasses = "group text-white font-headings flex items-center gap-1.5 
 const strNavIconClass = "size-5.5 group-hover:opacity-0 transition-opacity duration-200";
 const strNavSolidIconClass = "size-5.5 text-white group-hover:opacity-100 absolute opacity-0 transition-opacity duration-200"
 
-const strNavMobileLinkClass = "text-white font-headings text-6xl";
+const strNavMobileLinkClass = "text-white font-headings text-5xl";
 
 const elNav = useRef(null); 
 
@@ -112,7 +112,7 @@ const elNav = useRef(null);
         </div>
     </div>
 
-    <div className={`w-full h-full fixed top-0 left-0 flex bg-black z-30 align-items-center justify-center text-white p-16 ${isMobileMenuOpen ? 'flex' : 'hidden'}`}>
+    <div className={`overflow-auto w-full h-full fixed top-0 left-0 flex bg-black z-30 align-items-center justify-center text-white p-16 ${isMobileMenuOpen ? 'flex' : 'hidden'}`}>
           <button className="flex items-center absolute top-4 right-4 text-white font-bold text-base hover:text-gray-300" onClick={closeMobileMenu}>
             
             <XMarkIcon className="size-5 text-white" />

@@ -39,7 +39,7 @@ function ReviewPage() {
           </span>
       
         {review.subtitle && (
-          <p className="text-xl text-gray-300 mb-4">{review.subtitle}</p>
+          <p className="mb-4 heading-primary">{review.subtitle}</p>
         )}
 
       
@@ -50,10 +50,10 @@ function ReviewPage() {
         {/* Display the rich text content from reviewbody */}
         {review.reviewbody && review.reviewbody.content && (
 
-          <div className="text-white font-body">
+          <div className="">
 
             {review.reviewbody.content.map((paragraph, index) => (
-              <p key={index} className="mb-4 text-lg">
+              <p key={index} className="mb-4 font-body">
                 {paragraph.content.map((textNode, textIndex) => (
                   <span 
                     key={textIndex} 
