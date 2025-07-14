@@ -6,10 +6,9 @@ src:url("https://use.typekit.net/af/561615/0000000000000000774b970f/31/l?primer=
 font-display:auto;font-style:normal;font-weight:100 900;font-stretch:normal;
 }
 
-
-
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
 @theme {
       --color-brand:#AE1D1D;
       --color-brand-50:#ae1d1d5e;

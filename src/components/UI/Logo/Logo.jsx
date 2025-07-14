@@ -1,6 +1,8 @@
 function Logo() {
     return (
-        <h1 className="empire-logo">Empire</h1>
+        <div className="empire-logo">
+            REEL
+        </div>
     );
   }
 

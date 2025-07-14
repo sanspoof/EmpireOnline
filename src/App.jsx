@@ -7,12 +7,14 @@ import NewsList from './components/NewsList/NewsList';
 import ReviewSidebar from './components/ReviewSidebar/ReviewSidebar';
 import { ContentfulProvider } from './context/ContentfulContext';
 import { DataProvider } from "./context/DataContext"; 
+import { ThemeProvider } from './context/ThemeContext'; 
 import PageContent from './components/UI/PageContentLayout/PageContent';
 import Footer from './components/Footer/Footer';
 import ReviewPage from './pages/ReviewPage/ReviewPage';
 import NewsPage from './pages/NewsPage/NewsPage';
 import ScrollToTop from './components/Utils/ScrollToTop';
 import SettingsContainer from './components/UI/SettingsContainer/SettingsContainer';
+import Settings from './components/Settings/Settings';
 
 function HomePage() {
   return (
@@ -31,10 +33,9 @@ function App() {
 
   const [showSettings, setShowSettings] = useState(false);
 
-  console.log('showSettings:', showSettings);
-
   return (
     <>
+    <ThemeProvider>
     <SiteContainer>
     <ContentfulProvider>
       <DataProvider>
@@ -51,9 +52,12 @@ function App() {
         </BrowserRouter>
       </DataProvider>
     </ContentfulProvider>
-      <SettingsContainer showSettings={showSettings} onClose={() => setShowSettings(false)} />
+      <SettingsContainer showSettings={showSettings} onClose={() => setShowSettings(false)} >
+        <Settings />
+      </SettingsContainer>
     </SiteContainer>
     <Footer />
+    </ThemeProvider>
     </>
   );
 }
