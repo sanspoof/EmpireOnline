@@ -8,6 +8,7 @@ function NewsPage() {
   const { content, fetchContent, loading } = useContext(ContentfulContext);
   const [news, setNews] = useState(null);
 
+
   useEffect(() => {
 
     fetchContent('newsItem'); 
@@ -15,8 +16,6 @@ function NewsPage() {
   }, [fetchContent]);
 
   useEffect(() => {
-
-    console.log('Content:', content);
 
     if (content.newsItem) { 
 
@@ -46,17 +45,14 @@ function NewsPage() {
           <p className="text-xl text-gray-300 mb-4">{news.subtitle}</p>
         )}
 
-      
-      
       <div className="">
         
-        
         {/* Display the rich text content from newsbody */}
-        {news.newsbody && news.newsbody.content && (
+        {news.body && news.body.content && (
 
           <div className="text-white font-body">
 
-            {news.newsbody.content.map((paragraph, index) => (
+            {news.body.content.map((paragraph, index) => (
               <p key={index} className="mb-4 text-lg">
                 {paragraph.content.map((textNode, textIndex) => (
                   <span 

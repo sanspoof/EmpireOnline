@@ -21,7 +21,7 @@ function HeroHeader({ data = null }) {
               {/* <span className="text-white">Rating: {reviewrating}/5</span> */}
             </div>
           )}
-          <div className="font-heroheader text-white text-center md:text-left text-2xl md:text-4xl lg:text-6xl">{title}</div>
+        <div className={`font-heroheader text-white text-center md:text-left text-3xl md:text-4xl ${title.length > 90 ? 'lg:text-4xl' : 'lg:text-6xl'}`}>{title}</div>
           <span className="block w-12 border-b border-white"></span>
           <div className="text-center md:text-left text-white text-base md:text-lg lg:text-2xl/relaxed font-bold">{subtitle}</div>
 
@@ -59,7 +59,7 @@ function HeroHeader({ data = null }) {
   return (
     <div className="grid pt-48 pb-30 lg:pt-[initial] lg:pb-[initial] lg:h-hero-height lg:grid-cols-2 items-center relative px-6 border-b border-b-gray-500">
       <div className="grid justify-items-center md:justify-items-start gap-3 relative z-10">
-        <div className="font-heroheader text-white text-center md:text-left text-3xl md:text-4xl lg:text-6xl">{mainTitle}</div>
+        <div className={`font-heroheader text-white text-center md:text-left text-3xl md:text-4xl ${mainTitle.length > 100 ? 'lg:text-4xl' : 'lg:text-6xl'}`}>{mainTitle}</div>
         <span className="block w-12 border-b border-white"></span>
         <div className="text-center md:text-left text-white text-base md:text-lg lg:text-2xl/relaxed font-bold">{mainSubtitle}</div>
         <Button text={mainCallToActionButtonText} />
