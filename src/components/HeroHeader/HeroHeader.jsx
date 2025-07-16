@@ -2,8 +2,11 @@ import Button from "../UI/Button/Button";
 import Loading from '../UI/LoadingSpinner/LoadingSpinner';
 import { useHomepageBanner } from '../../hooks/Banner/useHomepageBanner';
 import RatingStars from '../UI/RatingStars/RatingStars';
+import { useTheme } from '../../context/ThemeContext';
 
 function HeroHeader({ data = null }) {
+
+const { isDark } = useTheme();
 
   // If custom data is provided, use it instead of the banner that is set in contentful
   // so news and review pages can use this component
@@ -31,7 +34,7 @@ function HeroHeader({ data = null }) {
             <img
               src={(heroImage || image).fields.file.url}
               alt={title}
-              className="w-full h-full object-cover heroimage-radialmask"
+              className={`w-full h-full object-cover ${isDark ? 'heroimage-radialmask' : ''}`}
             />
           )}
         </div>
@@ -50,7 +53,7 @@ function HeroHeader({ data = null }) {
 );
 
   if (error) return <div className="text-red-500">Error:</div>;
-  if (!mainBanner) return <div className="text-white">No banner data available</div>;
+  if (!mainBanner) return <div className="text-gray-900 dark:text-white">No banner data available</div>;
 
   const { mainTitle, mainSubtitle, mainCallToActionButtonText, mainBannerImage } = mainBanner;
 
@@ -68,8 +71,8 @@ function HeroHeader({ data = null }) {
         {mainBannerImage && (
           <img
             src={mainBannerImage.fields.file.url}
-            alt={mainTitle}
-            className="w-full h-full object-cover heroimage-radialmask"
+            alt={mainTitle} 
+            className={`w-full h-full object-cover ${isDark ? 'heroimage-radialmask' : ''}`}
           />
         )}
       </div>
