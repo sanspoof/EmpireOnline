@@ -1,7 +1,7 @@
 import { StarIcon}  from '@heroicons/react/24/solid';
 import { StarIcon as StarIconOutline } from '@heroicons/react/24/outline';
 
-function RatingStars({rating, size = '5.5'}) {
+function RatingStars({rating, size = '5.5', className}) {
 
     // mapping to Tailwind CSS classes for different size
     // rendering issues otherwise
@@ -26,12 +26,12 @@ function RatingStars({rating, size = '5.5'}) {
             <div className="flex items-center gap-0.5">
               {/* Filled stars */}
               {Array.from({ length: rating }, (_, i) => (
-                <span className={`${sizeClass} fill-white`} key={`filled-${i}`}><StarIcon className={`${sizeClass} text-gray-900 dark:text-white`} /></span>
+                <span className={`${sizeClass} fill-white`} key={`filled-${i}`}><StarIcon className={`${sizeClass} text-gray-900 dark:text-white ${className}`} /></span>
               ))}
 
               {/* Empty stars to make up to 5 total */}
               {Array.from({ length: 5 - rating }, (_, i) => (
-                <span className={`${sizeClass} fill-white`} key={`empty-${i}`}><StarIconOutline className={`${sizeClass} text-gray-900 dark:text-white`} /></span>
+                <span className={`${sizeClass} fill-white`} key={`empty-${i}`}><StarIconOutline className={`${sizeClass} text-gray-900 dark:text-white ${className}`} /></span>
               ))}
             </div>
     
