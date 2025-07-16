@@ -37,7 +37,7 @@ function NewsPage() {
     <>
     <HeroHeader data={news} />
     <article className='px-6 py-8' >
-                <span className="text-gray-400">
+                <span className="text-gray-400 dark:text-white">
             {new Date(news.created).toLocaleDateString()}
           </span>
       
@@ -53,7 +53,7 @@ function NewsPage() {
           <div className="text-white font-body">
 
             {news.body.content.map((paragraph, index) => (
-              <p key={index} className="mb-4 text-lg">
+              <p key={index} className="mb-4 text-lg text-gray-900 dark:text-white">
                 {paragraph.content.map((textNode, textIndex) => (
                   <span 
                     key={textIndex} 

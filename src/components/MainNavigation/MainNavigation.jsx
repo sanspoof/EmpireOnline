@@ -126,7 +126,7 @@ const elNav = useRef(null);
               <Link to="/" className={strNavMobileLinkClass} onClick={closeMobileMenu}>Magazine</Link>
               <Link to="/" className={strNavMobileLinkClass} onClick={closeMobileMenu}>VIP</Link>
               <span className="block w-12 border-b border-white"></span>
-              <Link to="/" className="text-white font-headings text-3xl" onClick={closeMobileMenu}>Settings</Link>
+              <Link to="/" className="text-white font-headings text-3xl" onClick={() => { closeMobileMenu(); onSettingsClick(); }}>Settings</Link>
           </div>
     </div>
 

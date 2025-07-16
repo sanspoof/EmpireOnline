@@ -50,7 +50,7 @@ font-display:auto;font-style:normal;font-weight:100 900;font-stretch:normal;
   }
 
   .heading-primary {
-      @apply text-white text-xl lg:text-2xl;
+      @apply text-gray-900 dark:text-white text-xl lg:text-2xl;
       font-variation-settings: 'wdth' 100, 'wght' 700;
   }
 
@@ -67,6 +67,11 @@ font-display:auto;font-style:normal;font-weight:100 900;font-stretch:normal;
     @apply text-gray-200 text-base xl:text-lg ;
     font-variation-settings: 'wdth' 100, 'wght' 500;
   }
+
+  .font-headings {
+  @apply text-gray-900 dark:text-white;
+  font-variation-settings: 'wdth' 100, 'wght' 700;
+}
 
 }
 
@@ -101,9 +106,7 @@ body {
       font-family: var(--appFont);
 }
 
-.font-headings {
-  font-variation-settings: 'wdth' 100, 'wght' 700;
-}
+
 
 .font-heroheader {
     font-variation-settings: 'wdth' 125, 'wght' 600;

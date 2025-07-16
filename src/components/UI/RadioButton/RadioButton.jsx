@@ -17,7 +17,7 @@ function RadioButton({ name, value, checked, onChange, label }) {
           : 'border-gray-400 bg-transparent group-hover:white/20 group-active:bg-white'
       }`}>
         {checked && (
-          <div className="w-2 h-2 rounded-full dark:bg-white"></div>
+          <div className="w-2 h-2 rounded-full bg-gray-900 dark:bg-white"></div>
         )}
       </div>
       
