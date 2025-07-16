@@ -1,6 +1,6 @@
-function Logo() {
+function Logo({ darkOnly = false }) {
     return (
-        <div className="empire-logo">
+        <div className={`empire-logo ${darkOnly ? 'empire-logo-dark' : ''}`}>
             REEL
         </div>
     );

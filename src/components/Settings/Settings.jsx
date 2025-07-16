@@ -27,10 +27,10 @@ function Settings() {
   );
 }
 
-function SimpleSettingsContainer({title, subtitle, children}) {
+function SimpleSettingsContainer({title, subtitle, children, className}) {
 
     return(
-        <div className="grid grid-col gap-1">
+        <div className={`grid grid-col gap-1 ${className}`}>
             <div className="flex flex-col">
                 <h3 className="text-gray-900 dark:text-white font-semibold text-cl">{title}</h3>
                 <p className="text-gray-600 dark:text-gray-200 text-sm font-body">{subtitle}</p>

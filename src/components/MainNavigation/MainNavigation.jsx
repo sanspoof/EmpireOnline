@@ -46,9 +46,9 @@ const elNav = useRef(null);
   return (
 
     <nav className=" h-nav-height w-full border-b border-b-gray-500 absolute top-0 left-0 z-100 body-padding">
-      <div className="flex justify-between items-center h-nav-height ml-auto mr-auto max-w-(--site-container-max-width) px-6">
+      <div className="flex justify-between items-center h-nav-height ml-auto mr-auto max-w-(--site-container-max-width) px-6 bg-black/50 dark:bg-transparent">
       <Link to="/">
-        <Logo />
+        <Logo darkOnly={true} />
       </Link>
 
       <div ref={elNav} className="items-center hidden lg:flex">

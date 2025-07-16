@@ -45,7 +45,6 @@ font-display:auto;font-style:normal;font-weight:100 900;font-stretch:normal;
 
 @layer components {
 
-
   .body-padding {
     @apply px-4 md:px-10 lg:px-16;
   }
@@ -56,8 +55,12 @@ font-display:auto;font-style:normal;font-weight:100 900;font-stretch:normal;
   }
 
   .empire-logo {
-    @apply text-2xl lg:text-4xl tracking-tighter text-white uppercase;
+    @apply text-2xl lg:text-4xl tracking-tighter text-gray-950 dark:text-white uppercase;
     font-variation-settings: 'wdth' 150, 'wght' 500;
+  }
+
+  .empire-logo-dark {
+    @apply text-white;
   }
 
   .font-body {
@@ -67,8 +70,34 @@ font-display:auto;font-style:normal;font-weight:100 900;font-stretch:normal;
 
 }
 
+  .heroimage-radialmask {
+    -webkit-mask-image: radial-gradient(circle, 
+      rgb(0, 0, 0) 40%, 
+      rgba(0, 0, 0, 0.85) 55%, 
+      rgba(0, 0, 0, 0.5) 70%, 
+      rgba(0, 0, 0, 0.15) 85%, 
+      rgba(0, 0, 0, 0) 100%),
+    radial-gradient(circle, 
+      rgb(0, 0, 0) 30%, 
+      rgba(0, 0, 0, 0.7) 50%, 
+      rgba(0, 0, 0, 0.3) 70%, 
+      rgba(0, 0, 0, 0) 90%);
+    mask-image: radial-gradient(circle at 50% 140%, 
+      rgb(0, 0, 0) 40%, 
+      rgba(0, 0, 0, 0.85) 55%, 
+      rgba(0, 0, 0, 0.5) 70%, 
+      rgba(0, 0, 0, 0.15) 85%, 
+      rgba(0, 0, 0, 0) 100%),
+    radial-gradient(circle, 
+      rgb(0, 0, 0) 30%, 
+      rgba(0, 0, 0, 0.7) 50%, 
+      rgba(0, 0, 0, 0.3) 70%, 
+      rgba(0, 0, 0, 0) 90%);
+    mask-composite: intersect;
+  }
+
 body {
-      background-color: var(--col-pageBackground);
+      @apply bg-gray-100 dark:bg-gray-950;
       font-family: var(--appFont);
 }
 
@@ -80,47 +109,9 @@ body {
     font-variation-settings: 'wdth' 125, 'wght' 600;
 }
 
-.font-body {
-  
-}
-
-.heroimage-mask {        
-      -webkit-mask-image: 
-        linear-gradient(to left, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%), 
-        linear-gradient(to top, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
-        mask-image: 
-        linear-gradient(to left, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%), 
-        linear-gradient(to top, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
-        mask-composite: intersect;
-}
-
 .review-drop-shadow {
   box-shadow:-14px 14px 0px #ae1d1d63;
 }
 
-.heroimage-radialmask {
-    -webkit-mask-image: radial-gradient(circle, 
-  rgb(0, 0, 0) 40%, 
-  rgba(0, 0, 0, 0.85) 55%, 
-  rgba(0, 0, 0, 0.5) 70%, 
-  rgba(0, 0, 0, 0.15) 85%, 
-  rgba(0, 0, 0, 0) 100%),
-radial-gradient(circle, 
-  rgb(0, 0, 0) 30%, 
-  rgba(0, 0, 0, 0.7) 50%, 
-  rgba(0, 0, 0, 0.3) 70%, 
-  rgba(0, 0, 0, 0) 90%);
-    mask-image: radial-gradient(circle at 50% 140%, 
-  rgb(0, 0, 0) 40%, 
-  rgba(0, 0, 0, 0.85) 55%, 
-  rgba(0, 0, 0, 0.5) 70%, 
-  rgba(0, 0, 0, 0.15) 85%, 
-  rgba(0, 0, 0, 0) 100%),
-radial-gradient(circle, 
-  rgb(0, 0, 0) 30%, 
-  rgba(0, 0, 0, 0.7) 50%, 
-  rgba(0, 0, 0, 0.3) 70%, 
-  rgba(0, 0, 0, 0) 90%);
-    mask-composite: intersect;
-}
+
 
