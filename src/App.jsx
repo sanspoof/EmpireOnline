@@ -6,7 +6,7 @@ import MainNavigation from './components/MainNavigation/MainNavigation';
 import NewsList from './components/NewsList/NewsList';
 import ReviewSidebar from './components/ReviewSidebar/ReviewSidebar';
 import { ContentfulProvider } from './context/ContentfulContext';
-import { DataProvider } from "./context/DataContext"; 
+// import { DataProvider } from "./context/DataContext"; 
 import { ThemeProvider } from './context/ThemeContext'; 
 import PageContent from './components/UI/PageContentLayout/PageContent';
 import Footer from './components/Footer/Footer';
@@ -38,7 +38,6 @@ function App() {
     <ThemeProvider>
     <SiteContainer>
     <ContentfulProvider>
-      <DataProvider>
         <BrowserRouter>
           <MainNavigation onSettingsClick={() => setShowSettings(true)} />
           <ScrollToTop />
@@ -50,7 +49,6 @@ function App() {
             <Route path="/news/:id" element={<NewsPage />} />
           </Routes>
         </BrowserRouter>
-      </DataProvider>
     </ContentfulProvider>
       <SettingsContainer showSettings={showSettings} onClose={() => setShowSettings(false)} >
         <Settings />
