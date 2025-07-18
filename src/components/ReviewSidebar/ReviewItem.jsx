@@ -25,11 +25,11 @@ function ReviewItem({ data, showStars = true }) {
   return (
     <Link to={`/review/${id}`} className="group">
     <div className="flex flex-col xl:flex-row items-center relative gap-4 group">
-      <div className="flex flex-col gap-1 align-baseline">
+      <div className="flex flex-col gap-1 align-baseline w-full">
           <h3 className="font-headings group-hover:underline underline-offset-4 xl:text-white">{funcRemoveReviewWord(title)}</h3>
           <p className="text-sm text-gray-900 dark:text-white xl:text-white font-medium">{funcTrimSummary(summary, 110)}</p> 
           <div className="flex items-center justify-between">
-              {showStars && <RatingStars rating={reviewrating} className="xl:text-white" /> }
+              {showStars && <RatingStars rating={reviewrating} /> }
               <div className="flex items-center gap-1"> 
                 <span className="text-bold font-headings xl:text-white text-sm">Read</span>
                 <ArrowRightIcon className="size-5 text-gray-900 dark:text-white xl:text-white group-hover:translate-x-1 transition-transform" />
