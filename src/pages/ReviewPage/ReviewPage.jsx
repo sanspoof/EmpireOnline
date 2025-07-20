@@ -53,7 +53,7 @@ function ReviewPage() {
           <div className="">
 
             {review.reviewbody.content.map((paragraph, index) => (
-              <p key={index} className="mb-4 font-body">
+              <p key={index} className="mb-4 font-body text-gray-900 dark:text-white ">
                 {paragraph.content.map((textNode, textIndex) => (
                   <span 
                     key={textIndex} 
