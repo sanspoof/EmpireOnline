@@ -27,7 +27,7 @@ function RatingStars({rating, size = '5.5', className}) {
               {/* Filled stars */}
               {Array.from({ length: rating }, (_, i) => (
                 <span className={`${sizeClass} fill-white`} key={`filled-${i}`}>
-                  <StarIcon className={`${sizeClass} ${rating === 5 ? 'text-amber-500' : 'text-gray-900 dark:text-white'} ${className}`} />
+                  <StarIcon className={`${sizeClass} ${rating === 5 ? 'text-amber-500' : 'text-gray-900 dark:text-white xl:text-white'} ${className}`} />
 
                   </span>
               ))}
@@ -35,7 +35,7 @@ function RatingStars({rating, size = '5.5', className}) {
               {/* Empty stars to make up to 5 total */}
               {Array.from({ length: 5 - rating }, (_, i) => (
                 <span className={`${sizeClass} fill-white`} key={`empty-${i}`}>
-                  <StarIconOutline className={`${sizeClass} text-gray-900 dark:text-white ${className}`} />
+                  <StarIconOutline className={`${sizeClass} text-gray-900 dark:text-white xl:text-white ${className}`} />
                   </span>
               ))}
             </div>
